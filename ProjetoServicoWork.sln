@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoServicoWork", "ProjetoServicoWork\ProjetoServicoWork.csproj", "{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96B44C75-173A-4A1A-9B7B-C0EFD387B8EA}
+	EndGlobalSection
+EndGlobal
