@@ -1,4 +1,13 @@
+using BackEndApi.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Carregue as configurações do arquivo appsettings.json
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
 
 // Add services to the container.
 
@@ -7,6 +16,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(configuration.GetConnectionString("Padrao"));
+}, ServiceLifetime.Scoped);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -14,6 +28,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
 app.UseHttpsRedirection();
