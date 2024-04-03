@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoServicoWork")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cd25940e5f500996e980405fdfd3ee65a0d4467")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4567018e7e137d3509f04dc6cfa86f096f7729b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoServicoWork")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoServicoWork")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
