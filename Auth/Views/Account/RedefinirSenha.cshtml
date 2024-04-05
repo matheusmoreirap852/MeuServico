@@ -1,0 +1,18 @@
+﻿@model RedefinirSenhaViewModel
+
+<form asp-controller="Account" asp-action="RedefinirSenha" method="post">
+    <input type="hidden" asp-for="UserId" />
+    <input type="hidden" asp-for="Token" />
+
+    <div class="form-group">
+        <label for="newPassword">Nova Senha</label>
+        <input type="password" id="newPassword" name="NewPassword" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirme a Nova Senha</label>
+        <input type="password" id="confirmPassword" name="ConfirmPassword" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Redefinir Senha</button>
+</form>

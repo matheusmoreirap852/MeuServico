@@ -1,0 +1,9 @@
+﻿@model string
+
+<form asp-controller="Account" asp-action="RecuperarSenha" method="post">
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar E-mail de Recuperação de Senha</button>
+</form>

@@ -1,0 +1,61 @@
+﻿/* Estilos para o cabeçalho */
+.navbar {
+    background-color: #0077b5;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    max-width: 30px;
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+/* Estilos para o conteúdo principal */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.intro h2, .countdown h2 {
+    color: #0077b5;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.intro p, .countdown p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Estilos para o botão de logout */
+.dropdown-menu {
+    background-color: #fff;
+}
+
+.dropdown-item {
+    color: #333;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #0077b5;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
