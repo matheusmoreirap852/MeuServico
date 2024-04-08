@@ -7,6 +7,6 @@ namespace BackEndApi.Controllers
     [ApiController]
     public class ServicoController : ControllerBase
     {
-
+        
     }
 }
