@@ -4,7 +4,7 @@ AWS_PROFILE="aws-matheus"
 AWS_REGION="us-east-1"
 ECR_REPO="590125742949.dkr.ecr.us-east-1.amazonaws.com"
 HOST_DEV=54.145.17.164
-PATH_KEY="~/key/keydev.pem"
+PATH_KEY="/mnt/keydev/keydev.pem"
 
 aws ecr get-login-password --region "$AWS_REGION" --profile "$AWS_PROFILE" | docker login --username AWS --password-stdin "$ECR_REPO"
 

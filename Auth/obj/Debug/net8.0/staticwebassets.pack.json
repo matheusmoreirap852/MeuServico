@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Logo.jpg"
     },
     {
+      "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\aiimg.png",
+      "PackagePath": "staticwebassets\\aiimg.png"
+    },
+    {
       "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\css\\nav.scss",
       "PackagePath": "staticwebassets\\css\\nav.scss"
     },

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\projetoservicowork\\projetoservicowork.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\projetoservicowork.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\backendapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\backendapi\\backendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\backendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\backendapi\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42DA0F1B-A020-4C81-8F98-4D54AB8F285E}|Auth\\Auth.csproj|c:\\users\\mathe\\source\\repos\\projetoservicowork\\auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42DA0F1B-A020-4C81-8F98-4D54AB8F285E}|Auth\\Auth.csproj|solutionrelative:auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjetoServicoWork",
+              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\ProjetoServicoWork.csproj",
+              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj*",
+              "RelativeToolTip": "ProjetoServicoWork\\ProjetoServicoWork.csproj*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-18T13:48:27.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackEndApi.http",
+              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\BackEndApi.http",
+              "RelativeDocumentMoniker": "BackEndApi\\BackEndApi.http",
+              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\BackEndApi.http*",
+              "RelativeToolTip": "BackEndApi\\BackEndApi.http*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-04-18T13:42:59.143Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -78,41 +104,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicoController.cs",
-              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Controllers\\ServicoController.cs",
-              "RelativeDocumentMoniker": "BackEndApi\\Controllers\\ServicoController.cs",
-              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Controllers\\ServicoController.cs",
-              "RelativeToolTip": "BackEndApi\\Controllers\\ServicoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:54:10.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "BackEndApi\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "BackEndApi\\Context\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:53:32.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RegistroServico.cs",
-              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Models\\RegistroServico.cs",
-              "RelativeDocumentMoniker": "BackEndApi\\Models\\RegistroServico.cs",
-              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\BackEndApi\\Models\\RegistroServico.cs",
-              "RelativeToolTip": "BackEndApi\\Models\\RegistroServico.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Program.cs",
+              "RelativeDocumentMoniker": "Auth\\Program.cs",
+              "ToolTip": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Program.cs*",
+              "RelativeToolTip": "Auth\\Program.cs*",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:53:19.813Z",
+              "WhenOpened": "2024-04-18T13:26:27.221Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t2K7RQ4tl595Zr1Z+jd2JxDGgnOVJ/Pg5t0m12x1YDk=",
+  "Hash": "/S+X+e6FyVHs0vmLEcngn1hgKhjK7HTWML17fF+zTRk=",
   "Source": "Auth",
   "BasePath": "_content/Auth",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Auth.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\aiimg.png",
+      "SourceId": "Auth",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\",
+      "BasePath": "_content/Auth",
+      "RelativePath": "aiimg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\aiimg.png"
     },
     {
       "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\css\\nav.scss",
