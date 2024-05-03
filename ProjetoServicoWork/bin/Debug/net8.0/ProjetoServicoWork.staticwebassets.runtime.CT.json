@@ -5,6 +5,14 @@
   ],
   "Root": {
     "Children": {
+      "aiimg.png": {
+        "Children": null,
+        "Asset": {
+          "ContentRootIndex": 0,
+          "SubPath": "aiimg.png"
+        },
+        "Patterns": null
+      },
       "css": {
         "Children": {
           "site.css": {

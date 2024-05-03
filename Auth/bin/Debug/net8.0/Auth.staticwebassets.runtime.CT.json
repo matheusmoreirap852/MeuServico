@@ -772,22 +772,6 @@
         "Asset": null,
         "Patterns": null
       },
-      "logo-sesc .png": {
-        "Children": null,
-        "Asset": {
-          "ContentRootIndex": 0,
-          "SubPath": "logo-sesc .png"
-        },
-        "Patterns": null
-      },
-      "Logo.jpg": {
-        "Children": null,
-        "Asset": {
-          "ContentRootIndex": 0,
-          "SubPath": "Logo.jpg"
-        },
-        "Patterns": null
-      },
       "Identity": {
         "Children": {
           "css": {

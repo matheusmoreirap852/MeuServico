@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/S+X+e6FyVHs0vmLEcngn1hgKhjK7HTWML17fF+zTRk=",
+  "Hash": "ivLcw7HrGsz7eSVI6A3ZpPbKT9b4s9dq1lVcP15MVDE=",
   "Source": "Auth",
   "BasePath": "_content/Auth",
   "Mode": "Default",
@@ -2770,44 +2770,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\Logo.jpg",
-      "SourceId": "Auth",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\",
-      "BasePath": "_content/Auth",
-      "RelativePath": "Logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Logo.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\logo-sesc .png",
-      "SourceId": "Auth",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\",
-      "BasePath": "_content/Auth",
-      "RelativePath": "logo-sesc .png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\logo-sesc .png"
     }
   ]
 }

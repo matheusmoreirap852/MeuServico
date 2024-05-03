@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ProjetoServicoWork.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\aiimg.png",
+      "PackagePath": "staticwebassets\\aiimg.png"
+    },
+    {
       "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

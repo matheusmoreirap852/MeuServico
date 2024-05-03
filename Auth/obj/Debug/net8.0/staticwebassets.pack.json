@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\Auth.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\Logo.jpg",
-      "PackagePath": "staticwebassets\\Logo.jpg"
-    },
-    {
       "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\aiimg.png",
       "PackagePath": "staticwebassets\\aiimg.png"
     },
@@ -339,10 +335,6 @@
     {
       "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
-    },
-    {
-      "Id": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\logo-sesc .png",
-      "PackagePath": "staticwebassets\\logo-sesc .png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Auth.Microsoft.AspNetCore.StaticWebAssets.props",

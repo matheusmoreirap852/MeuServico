@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vThVf0mZ+s4IADWZbewPXIGtZXPdum6Psku0R9DK0Y0=",
+  "Hash": "mdctwKC7XUuF/7lzknbnznW+YKSudsOgZMgszqGPf/w=",
   "Source": "ProjetoServicoWork",
   "BasePath": "_content/ProjetoServicoWork",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjetoServicoWork.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\aiimg.png",
+      "SourceId": "ProjetoServicoWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\",
+      "BasePath": "_content/ProjetoServicoWork",
+      "RelativePath": "aiimg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\aiimg.png"
     },
     {
       "Identity": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\css\\site.css",
