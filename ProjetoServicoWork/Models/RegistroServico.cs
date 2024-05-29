@@ -10,5 +10,10 @@ namespace ProjetoServicoWork.Models
         public string Descricao { get; set; }
         public string Anotacoes { get; set; }
         public DateTime? DataCadastro { get; set; } = DateTime.Now;
+
+        internal object Where(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

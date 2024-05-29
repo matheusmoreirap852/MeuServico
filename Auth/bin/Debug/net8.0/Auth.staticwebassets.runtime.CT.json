@@ -1,8 +1,8 @@
 {
   "ContentRoots": [
-    "/app/wwwroot/",
-    "/.nuget/fallbackpackages/microsoft.aspnetcore.identity.ui/8.0.3/staticwebassets/V5/",
-    "/app/obj/Debug/net8.0/scopedcss/bundle/"
+    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\wwwroot\\",
+    "C:\\Users\\mathe\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.3\\staticwebassets\\V5\\",
+    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\obj\\Debug\\net8.0\\scopedcss\\bundle\\"
   ],
   "Root": {
     "Children": {

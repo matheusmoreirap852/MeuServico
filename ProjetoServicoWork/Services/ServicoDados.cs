@@ -27,8 +27,13 @@ namespace ProjetoServicoWork.Services
         {
             try
             {
-
-                return await HttpService.SendHttpRequestAsyncList<RegistroServico>(_httpClientFactory, _configuration, "/api/Servico", token);
+                var registros = await HttpService.SendHttpRequestAsyncList<RegistroServico>(
+                                                                        _httpClientFactory,
+                                                                        _configuration,
+                                                                        "/api/Servico/all",
+                                                                        null
+                                                                    );
+                return registros;
             }
             catch (Exception ex)
             {
@@ -49,7 +54,8 @@ namespace ProjetoServicoWork.Services
                 return null;
             }
         }
-        public async Task<RegistroServico> CreateEqpAtleta(RegistroServico registroServico, string token)
+
+        public async Task<RegistroServico> CreateServico(RegistroServico registroServico, string token)
         {
             try
             {
@@ -65,7 +71,8 @@ namespace ProjetoServicoWork.Services
                 return null;
             }
         }
-        public async Task<RegistroServico> UpdateEqpAtleta(RegistroServico registroServico, string token)
+
+        public async Task<RegistroServico> UpdateServico(RegistroServico registroServico, string token)
         {
             try
             {

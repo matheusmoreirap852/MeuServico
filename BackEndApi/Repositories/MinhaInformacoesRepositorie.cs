@@ -14,32 +14,25 @@ namespace BackEndApi.Repositories
         {
             _context = context;
         }
-
-        public async Task<bool> DeleteById(int id)
+       
+        public async Task<bool> DeleteById(decimal id)
         {
             try
             {
-                var registro = await _context.tbRegistroServico.FindAsync(id);
-                if (registro != null)
+                var dados = await GetAllId(id);
+                if (dados == null)
                 {
-                    _context.tbRegistroServico.Remove(registro);
-                    await _context.SaveChangesAsync();
-                    return true;
+                    return false; // Ou lançar uma exceção, caso prefira.
                 }
-                else
-                {
-                    return false; 
-                }
+                _context.tbRegistroServico.Remove(dados);
+                await _context.SaveChangesAsync();
+                return true;
             }
             catch (Exception ex)
             {
+                // Aqui você pode registrar o erro, se necessário
                 return false;
             }
-        }
-
-        public async Task<bool> DeleteById(decimal id)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<RegistroServico>> GetAll()
@@ -81,12 +74,23 @@ namespace BackEndApi.Repositories
         {
             try
             {
-                var existingEntity = _context.tbRegistroServico.Attach(dados);
-                _context.Entry(existingEntity).State = EntityState.Modified;
-                await _context.SaveChangesAsync();
-                return existingEntity.Entity;
+                var existingEntity = await _context.tbRegistroServico.FindAsync(dados.Id);
+                if (existingEntity == null)
+                {
+                    throw new Exception("Entity not found.");
+                }
 
-            }catch(Exception ex)
+                // Atualiza as propriedades da entidade existente com os valores de 'dados'
+                _context.Entry(existingEntity).CurrentValues.SetValues(dados);
+
+                // Marca a entidade como modificada
+                _context.Entry(existingEntity).State = EntityState.Modified;
+
+                await _context.SaveChangesAsync();
+                return existingEntity;
+
+            }
+            catch(Exception ex)
             {
                 throw ex;
             }

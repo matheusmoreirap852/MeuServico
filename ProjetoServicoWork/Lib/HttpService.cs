@@ -1,37 +1,67 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace ProjetoServicoWork.Lib
 {
     public class HttpService
     {
-        public static async Task<IEnumerable<T>> SendHttpRequestAsyncList<T>(IHttpClientFactory httpClientFactory, IConfiguration configuration, string apiPath, string token)
-        {
-            var apiBase = configuration.GetValue<string>("ServiceUri:ProductApi");
-
-            if (!Uri.TryCreate(apiBase, UriKind.Absolute, out var baseUri))
+        public static async Task<IEnumerable<T>> SendHttpRequestAsyncList<T>(
+        IHttpClientFactory httpClientFactory,
+        IConfiguration configuration,
+        string apiPath,
+        string token)
             {
-                Console.WriteLine("A base da API não é uma URI válida.");
+                var apiBase = configuration.GetValue<string>("ServiceUri:ProductApi");
+
+                if (!Uri.TryCreate(apiBase, UriKind.Absolute, out var baseUri))
+                {
+                    Console.WriteLine("A base da API não é uma URI válida.");
+                    return Enumerable.Empty<T>();
+                }
+
+                var requestUri = new Uri(baseUri, apiPath);
+                var client = httpClientFactory.CreateClient("ProductApi");
+
+                // Log the request URI for debugging purposes
+                Console.WriteLine($"Request URI: {requestUri}");
+
+                try
+                {
+                    var response = await client.GetAsync(requestUri);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var apiResponse = await response.Content.ReadAsStringAsync();
+                        return JsonSerializer.Deserialize<IEnumerable<T>>(apiResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                    }
+
+                    Console.WriteLine($"HTTP GET request to {requestUri} failed with status code {response.StatusCode}");
+                }
+                catch (HttpRequestException ex)
+                {
+                    Console.WriteLine($"Request error: {ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Unexpected error: {ex.Message}");
+                }
+
                 return Enumerable.Empty<T>();
             }
 
-            var requestUri = new Uri(baseUri, apiPath);
-            var client = httpClientFactory.CreateClient("ProductApi");
-            HttpClientExtensions.PutTokenInHeaderAuthorization(token, client);
-
-            var response = await client.GetAsync(requestUri);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var apiResponse = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<IEnumerable<T>>(apiResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            }
-
-            // Handle error or return an empty collection, if necessary.
-            return Enumerable.Empty<T>();
-        }
-
-        public static async Task<T> SendHttpRequestAsync<T>(IHttpClientFactory httpClientFactory, IConfiguration configuration, string apiPath, string token, HttpMethod method = null, object content = null)
+        public static async Task<T> SendHttpRequestAsync<T>(
+            IHttpClientFactory httpClientFactory,
+            IConfiguration configuration,
+            string apiPath,
+            string token,
+            HttpMethod method,
+            object content = null)
         {
             var apiBase = configuration.GetValue<string>("ServiceUri:ProductApi");
 
@@ -43,28 +73,15 @@ namespace ProjetoServicoWork.Lib
 
             var requestUri = new Uri(baseUri, apiPath);
             var client = httpClientFactory.CreateClient("ProductApi");
-            HttpClientExtensions.PutTokenInHeaderAuthorization(token, client);
+            AddAuthorizationHeader(client, token);
 
-            HttpResponseMessage response;
-
-            switch (method?.Method)
+            HttpResponseMessage response = method switch
             {
-                case "POST":
-                    response = await client.PostAsync(requestUri, CreateStringContent(content));
-                    break;
-
-                case "PUT":
-                    response = await client.PutAsync(requestUri, CreateStringContent(content));
-                    break;
-
-                case "DELETE":
-                    response = await client.DeleteAsync(requestUri);
-                    break;
-
-                default:
-                    response = await client.GetAsync(requestUri);
-                    break;
-            }
+                HttpMethod m when m == HttpMethod.Post => await client.PostAsync(requestUri, CreateStringContent(content)),
+                HttpMethod m when m == HttpMethod.Put => await client.PutAsync(requestUri, CreateStringContent(content)),
+                HttpMethod m when m == HttpMethod.Delete => await client.DeleteAsync(requestUri),
+                _ => await client.GetAsync(requestUri),
+            };
 
             if (response.IsSuccessStatusCode)
             {
@@ -72,8 +89,16 @@ namespace ProjetoServicoWork.Lib
                 return JsonSerializer.Deserialize<T>(apiResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             }
 
-            // Handle error or return a default value, if necessary.
+            Console.WriteLine($"HTTP {method.Method} request to {requestUri} failed with status code {response.StatusCode}");
             return default;
+        }
+
+        private static void AddAuthorizationHeader(HttpClient client, string token)
+        {
+            if (!string.IsNullOrEmpty(token))
+            {
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+            }
         }
 
         private static StringContent CreateStringContent(object content)
@@ -83,6 +108,5 @@ namespace ProjetoServicoWork.Lib
             var json = JsonSerializer.Serialize(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             return new StringContent(json, Encoding.UTF8, "application/json");
         }
-
     }
 }

@@ -1,13 +1,14 @@
-﻿using BackEndApi.Models;
+﻿using BackEndApi.Dtos;
+using BackEndApi.Models;
 
 namespace BackEndApi.Service.IService
 {
     public interface IMinhaInformacoes
     {
-        Task<IEnumerable<RegistroServico>> GetAll();
-        Task<RegistroServico> GetAllId(decimal id);
-        Task<RegistroServico> Update(RegistroServico dados);
-        Task<RegistroServico> Set(RegistroServico dados);
+        Task<IEnumerable<RegistroServiceDto>> GetAll();
+        Task<RegistroServiceDto> GetAllId(decimal id);
+        Task<RegistroServiceDto> Update(RegistroServiceDto dados);
+        Task<RegistroServiceDto> Set(RegistroServiceDto dados);
         Task<bool> DeleteById(decimal id);
     }
 }

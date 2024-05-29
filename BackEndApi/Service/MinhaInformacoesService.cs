@@ -1,18 +1,20 @@
 ﻿using AutoMapper;
+using BackEndApi.Dtos;
 using BackEndApi.Models;
+using BackEndApi.Repositories.IRepositories;
 using BackEndApi.Service.IService;
 using System.Data;
 
 namespace BackEndApi.Service
 {
-    public class MinhaInformacoes : IMinhaInformacoes
+    public class MinhaInformacoesService : IMinhaInformacoes
     {
 
-        private readonly IMinhaInformacoes _minhaInformacoes;
+        private readonly IMinhaInformacoesRepositorie _minhaInformacoes;
         private readonly IMapper _mapper;
         private readonly IDbConnection _dbConnection;
 
-        public MinhaInformacoes(IMinhaInformacoes minhaInformacoes, IMapper mapper, IDbConnection dbConnection)
+        public MinhaInformacoesService(IMinhaInformacoesRepositorie minhaInformacoes, IMapper mapper, IDbConnection dbConnection)
         {
             _minhaInformacoes = minhaInformacoes;
             _mapper = mapper;
@@ -24,6 +26,8 @@ namespace BackEndApi.Service
         {
             try
             {
+                var ValorEntity = _minhaInformacoes.GetAllId(id).Result;
+                await _minhaInformacoes.DeleteById(ValorEntity.Id);
                 return true;
             }catch (Exception ex)
             {
@@ -32,24 +36,55 @@ namespace BackEndApi.Service
             }
         }
 
-        public Task<IEnumerable<RegistroServico>> GetAll()
+        public async Task<IEnumerable<RegistroServiceDto>> GetAll()
         {
-            throw new NotImplementedException();
+            var ValorEntity = await _minhaInformacoes.GetAll();
+            return _mapper.Map<IEnumerable<RegistroServiceDto>>(ValorEntity);
+        } 
+
+        public async Task<RegistroServiceDto> GetAllId(decimal id)
+        {
+            try
+            {
+                var ValorEntity = await _minhaInformacoes.GetAllId(id);
+                return _mapper.Map<RegistroServiceDto>(ValorEntity);
+            }
+            catch  (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
-        public Task<RegistroServico> GetAllId(decimal id)
+        public async Task<RegistroServiceDto> Set(RegistroServiceDto dados)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var ValorEntity = _mapper.Map<RegistroServico>(dados);
+                await _minhaInformacoes.Set(ValorEntity);
+                dados.Id = ValorEntity.Id;
+                return dados;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
-        public Task<RegistroServico> Set(RegistroServico dados)
+        public async Task<RegistroServiceDto> Update(RegistroServiceDto dados)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<RegistroServico> Update(RegistroServico dados)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                var ValoresEntity = _mapper.Map<RegistroServico>(dados);
+                await _minhaInformacoes.Update(ValoresEntity);
+                dados.Id  = ValoresEntity.Id;
+                return dados;   
+            }catch  (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
     }
 }

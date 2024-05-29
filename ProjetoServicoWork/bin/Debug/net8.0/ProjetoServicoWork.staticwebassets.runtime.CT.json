@@ -1,7 +1,7 @@
 {
   "ContentRoots": [
-    "/app/wwwroot/",
-    "/app/obj/Debug/net8.0/scopedcss/bundle/"
+    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\wwwroot\\",
+    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\obj\\Debug\\net8.0\\scopedcss\\bundle\\"
   ],
   "Root": {
     "Children": {
