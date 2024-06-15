@@ -1,0 +1,471 @@
+﻿.header__topo-principal_menu > li > form a:focus,
+.menu-search button:focus {
+    outline: 0
+}
+.ul-display {
+    outline: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    position: relative
+}
+
+li.active {
+    padding: 6px;
+    border: 3px solid #f1f1f1;
+    font-size: 20px;
+    color: #212529;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 20%;
+}
+
+.pagination-container li a{
+    padding: 6px;
+    border: 3px solid #f1f1f1;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    border: none;
+    color: #212529;
+    border-radius: 20%;
+}
+}
+
+body {
+    background-color: #fff;
+    z-index: 10;
+    font-size: 16px;
+    font-family: Roboto,sans-serif;
+    overflow-x: hidden
+}
+
+#contato .contato__respostas h1,
+#page__detalhe-agendamento .form label, .area-acao__subtitulo, .area-acao__titulo, .consulta-cartao__subtitulo, .consulta-cartao__titulo, .consulta__sesc-descricao, .consulta__sesc-titulo, .consulta__sesc-topico, .contato__formulario h1, .contato__formulario h3, .contato__header h1, .contato__header h3, .cursos-titulo, .dados__unidade .dados__unidade-inicial p, .dados__unidade .dados__unidade-titulo, .raleway {
+    font-family: Raleway,sans-serif !important
+}
+
+.inherit-height .container, .inherit-height .row, .inherit-height div[class^=col] {
+    height: inherit
+}
+
+.success {
+    color: #62b976 !important
+}
+
+.error,
+.red {
+    color: #cc2032 !important
+}
+
+#page_unidades blockquote a,
+.btn {
+    border-radius: 0;
+    font-size: .937em;
+    font-weight: 500;
+    padding: 10px 20px;
+    box-shadow: none;
+    background: 0 0
+}
+
+    #page_unidades blockquote a:hover,
+    .btn:hover {
+        text-decoration: none;
+        text-transform: uppercase
+    }
+
+.s-btn--primary {
+    background: #3991d2;
+    color: #fff
+}
+
+#header {
+    height: auto;
+    background: #3991d2
+}
+
+    #header .header__topo-destaque {
+        height: 50px;
+        transition: opacity .6s,height .75s
+    }
+
+body.scrolling .header__topo-destaque {
+    opacity: 0;
+    height: 0 !important
+}
+
+.header__topo-destaque_menu, .header__topo-destaque_social {
+    flex-direction: row;
+    list-style: none;
+    height: 50px;
+    margin: 0;
+    padding: 0
+}
+
+    .header__topo-destaque_social li a {
+        color: #fff;
+        font-size: 1.125em
+    }
+
+    .header__topo-destaque_menu li.separator {
+        width: 1px;
+        height: 16px;
+        background-color: #fff
+    }
+
+    .header__topo-destaque_menu li a {
+        font-size: .75em;
+        display: block;
+        color: #FFF;
+        text-transform: uppercase
+    }
+
+.header__topo-principal {
+    background: #fff;
+    height: 85px;
+    border-bottom: 2px solid #f5f5f5;
+    box-shadow: 0 0 2px rgba(0,0,0,.2)
+}
+
+    .header__topo-principal .container, .header__topo-principal .row {
+        height: inherit
+    }
+
+    .header__topo-principal .logo h1 {
+        margin: 0;
+        padding: 0
+    }
+
+.header__topo-principal_menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    height: 85px;
+    position: relative
+}
+
+    .header__topo-principal_menu > li a {
+        color: #2e2e2e;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #FFF
+    }
+
+        .header__topo-principal_menu > li a:hover {
+            text-decoration: none;
+            color: #3991d2;
+            border-bottom: 1px solid #3991d2
+        }
+
+    .header__topo-principal_menu li a.atendimento, .header__topo-principal_menu li a.atuacao {
+        padding-bottom: 20px
+    }
+
+.has-submenu {
+    position: relative
+}
+
+    .has-submenu:active .submenu, .has-submenu:focus .submenu, .has-submenu:hover .submenu {
+        display: block
+    }
+
+    .has-submenu
+    .submenu {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: none;
+        z-index: 100;
+        width: 240px;
+        list-style: none;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #d5d5d5;
+        padding: 15px
+    }
+
+        .has-submenu .submenu li {
+            margin-bottom: 10px
+        }
+
+            .has-submenu .submenu li a {
+                font-size: .875rem
+            }
+
+            .has-submenu .submenu li.arrow {
+                width: 0;
+                height: 0;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid #d5d5d5;
+                margin: 0 0 15px;
+                position: absolute;
+                top: -8px
+            }
+
+.header__topo-principal_menu > li > form a {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none
+}
+
+    .header__topo-principal_menu > li > form a i {
+        transform: rotateY(180deg)
+    }
+
+    .header__topo-principal_menu > li > form a:hover {
+        text-decoration: none;
+        color: #242424
+    }
+
+.row-search {
+    display: none
+}
+
+.menu-search {
+    align-items: baseline
+}
+
+    .menu-search button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 100
+    }
+
+        .menu-search button i {
+            font-size: 1.128rem;
+            margin-left: 15px
+        }
+
+.collapse__item-recrutamento .item-descricao, .collapse__item-recrutamento .item-titulo {
+    font-size: .985em
+}
+
+.collapse_arquivos li a {
+    font-size: 1.1em
+}
+
+    .collapse_arquivos li a i {
+        margin-right: 5px
+    }
+
+#page_unidades blockquote #recrutamento .share a, #recrutamento .share #page_unidades blockquote a, #recrutamento .share .col-xl-auto, #recrutamento .share a.btn {
+    margin: 0 auto 20px
+}
+
+#footer {
+    padding: 29px 0 10px
+}
+
+.footer__container-endereco {
+    margin: 25px 0;
+    display: block
+}
+
+#licitacoes .acontece__refinar-descricao {
+    margin: 5px 0 10px
+}
+
+#licitacoes .acontece__filtros form.busca, .acontece__refinar form.busca, .lista-licitacoes .card-header, .lista-licitacoes__item-filtro, .lista-licitacoes__items div[class^=col] {
+    margin-bottom: 10px
+}
+
+#licitacoes .card {
+    border: none
+}
+
+#licitacoes .card-body {
+    padding: 0
+}
+
+.lista-licitacoes {
+    margin-top: 15px
+}
+
+#contato, .accordion header:nth-child(1) {
+    margin-top: 10px
+}
+
+.lista-licitacoes .card-header button .title {
+    font-size: 1em
+}
+
+.lista-licitacoes__filtros-texto, .lista-licitacoes__item-filtro, .lista-licitacoes__limpar {
+    font-size: .85em
+}
+
+.accorion header {
+    margin-bottom: 20px
+}
+
+.contato__header h3 {
+    color: #252525;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 25px
+}
+
+.contato__header form .form-control {
+    margin-top: 20px
+}
+
+#frm-cartao, .contato__content {
+    margin-top: 10px
+}
+
+.contato__menu-line, .contato__menu-mobile span, .contato__menu-mobile span::after, .contato__menu-mobile span::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    border-radius: 2em;
+    background: #2e2e2e
+}
+
+.contato__menu-mobile span {
+    position: relative;
+    transition: all .2s linear
+}
+
+    .contato__menu-mobile span::before {
+        position: absolute;
+        top: -12px
+    }
+
+    .contato__menu-mobile span::after {
+        position: absolute;
+        bottom: 6px
+    }
+
+body.contato__open .contato__menu-mobile .contato__menu-line, body.contato__open .contato__menu-mobile span, body.contato__open .contato__menu-mobile span::after, body.contato__open .contato__menu-mobile span::before {
+    color: #3991d2
+}
+
+body.contato__open .contato__menu-mobile span {
+    background: 0 0
+}
+
+    body.contato__open .contato__menu-mobile span::before {
+        top: 0;
+        transform: rotate(45deg)
+    }
+
+    body.contato__open .contato__menu-mobile span::after {
+        bottom: 0;
+        transform: rotate(-45deg)
+    }
+
+.nossa-historia__texto {
+    font-size: 1.2em
+}
+
+#page__cartao-sesc {
+    margin-top: 30px
+}
+
+#breadcrumb.cartao-sesc .pagina__titulo.capa {
+    height: 195px
+}
+
+#cartao-consulta {
+    padding: 25px 0
+}
+
+.consulta-cartao__titulo {
+    font-size: 2em
+}
+
+.consulta-cartao__subtitulo {
+    font-size: 1.1em
+}
+
+#frm-cartao #page_unidades blockquote a, #frm-cartao .btn, #page_unidades blockquote #frm-cartao a {
+    padding: 0 14px
+}
+
+.areas__frase {
+    margin: 30px 0 50px
+}
+
+.area {
+    min-height: 400px;
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 35px
+}
+
+    .area a, .area__descricao {
+        font-size: 1.15em
+    }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}

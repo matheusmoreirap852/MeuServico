@@ -52,8 +52,8 @@ public class IdentityConfiguration
                     ClientId = "copaSesc",
                     ClientSecrets = { new Secret("abracadabra#simsalabim".Sha256()) },
                     AllowedGrantTypes = GrantTypes.Code, //via codigo
-                    RedirectUris = { "https://localhost:44301/signin-oidc" }, //login
-                    PostLogoutRedirectUris = { "https://localhost:44301/signout-callback-oidc" }, //logout
+                    RedirectUris = { "https://localhost:7077/signin-oidc" }, //login
+                    PostLogoutRedirectUris = { "https://localhost:7077/signout-callback-oidc" }, //logout
                     AllowedScopes = new List<string>
                     {
                        IdentityServerConstants.StandardScopes.OpenId,

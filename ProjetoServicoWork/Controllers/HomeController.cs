@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoServicoWork.Models;
@@ -13,13 +14,9 @@ namespace ProjetoServicoWork.Controllers
         {
             _logger = logger;
         }
-       
-        public IActionResult Index()
-        {
-            return View();
-        }
-        
-        public IActionResult Privacy()
+
+        [Authorize]
+        public async Task<IActionResult> Index()
         {
             return View();
         }

@@ -13,11 +13,13 @@ public class RegistroServiceDto
     public string Titulo { get; set; }
 
     [Required(ErrorMessage = "A descrição é obrigatória.")]
-    [StringLength(200, ErrorMessage = "A descrição deve ter no máximo 200 caracteres.")]
+    [StringLength(300, ErrorMessage = "A descrição deve ter no máximo 200 caracteres.")]
     public string Descricao { get; set; }
 
-    [StringLength(50, ErrorMessage = "As anotações devem ter no máximo 50 caracteres.")]
+    [StringLength(300, ErrorMessage = "As anotações devem ter no máximo 50 caracteres.")]
     public string Anotacoes { get; set; }
+
+    public string? LinhaTempo { get; set; }
 
     public DateTime? DataCadastro { get; set; } = DateTime.Now;
 }

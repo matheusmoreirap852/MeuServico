@@ -153,3 +153,4 @@ C:\Users\mathe\source\repos\ProjetoServicoWork\Auth\obj\Debug\net8.0\refint\Auth
 C:\Users\mathe\source\repos\ProjetoServicoWork\Auth\obj\Debug\net8.0\Auth.pdb
 C:\Users\mathe\source\repos\ProjetoServicoWork\Auth\obj\Debug\net8.0\Auth.genruntimeconfig.cache
 C:\Users\mathe\source\repos\ProjetoServicoWork\Auth\obj\Debug\net8.0\ref\Auth.dll
+C:\Users\mathe\source\repos\ProjetoServicoWork\Auth\bin\Debug\net8.0\keys\is-signing-key-F1FF95D046ED05A10E06258524D83AE7.json

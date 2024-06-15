@@ -30,7 +30,7 @@ namespace ProjetoServicoWork.Services
                 var registros = await HttpService.SendHttpRequestAsyncList<RegistroServico>(
                                                                         _httpClientFactory,
                                                                         _configuration,
-                                                                        "/api/Servico/all",
+                                                                        "/api/Servico/",
                                                                         null
                                                                     );
                 return registros;
@@ -61,7 +61,7 @@ namespace ProjetoServicoWork.Services
             {
                 return await HttpService.SendHttpRequestAsync<RegistroServico>(_httpClientFactory,
                     _configuration,
-                    "api/Servico",
+                    "api/Servico/Criar",
                     token,
                     HttpMethod.Post,
                     registroServico);

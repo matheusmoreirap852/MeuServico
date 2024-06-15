@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ProjetoServicoWork.Models;
 using ProjetoServicoWork.Services.Contracts;
 using X.PagedList;
 
@@ -31,24 +32,40 @@ namespace ProjetoServicoWork.Controllers
 
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> IndexAsync(int? id, int? pagina, string? filter)
         {
 
             const int itensPorPagina = 10;
             int numeroPagina = pagina ?? 1;
-            //HttpContext.Session.SetInt32(SessionKeyIdEquipe, id);
             // Obtenha o token JWT
-           // var accessToken = await HttpContext.GetTokenAsync("access_token");
-            //var idEvento = HttpContext.Session.GetInt32(SessionKeyId).ToString();
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
 
-            var ListServico = await _servicoDados.GetAll("accessToken");
-
-            // Filter list if filter is provided.
+            var ListServico = await _servicoDados.GetAll(accessToken);
             var model = !string.IsNullOrWhiteSpace(filter)
                         ? ListServico.Where(p => p.Titulo.Contains(filter)).ToList()
                         : ListServico;
             return View(model.ToPagedList(numeroPagina, ItensPorPagina));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Create(int id)
+        {
+            return View();  
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateDados(RegistroServico registroServico)
+        {
+            try
+            {
+                var criarInformações = await _servicoDados.CreateServico(registroServico, null);
+                return View(registroServico);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+            
         }
 
     }

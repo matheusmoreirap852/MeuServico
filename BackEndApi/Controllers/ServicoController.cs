@@ -15,13 +15,15 @@ namespace BackEndApi.Controllers
     public class ServicoController : ControllerBase
     {
         private readonly IMinhaInformacoes _minhaInformacoes;
-
+            
         public ServicoController(IMinhaInformacoes minhaInformacoes)
         {
             _minhaInformacoes = minhaInformacoes ?? throw new ArgumentNullException(nameof(minhaInformacoes));
         }
 
-        [HttpGet("all", Name = "GetAllServicos")]
+
+        [HttpGet(Name = "GetAllServicos")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<RegistroServico>>> GetAllServicos()
         {
             try
@@ -37,7 +39,10 @@ namespace BackEndApi.Controllers
             }
         }
 
+
+         
         [HttpGet("{id}", Name = "GetServicoById")]
+        [Authorize]
         public async Task<ActionResult<RegistroServico>> GetServicoById(decimal id)
         {
             try
@@ -53,7 +58,8 @@ namespace BackEndApi.Controllers
             }
         }
 
-        [HttpPost("Criar", Name = "PostServico")]
+        [HttpPost(Name = "PostServico")]
+        [Authorize]
         public async Task<ActionResult<RegistroServico>> PostServico([FromBody] RegistroServiceDto tbEqp_PesDto)
         {
             try
@@ -69,7 +75,8 @@ namespace BackEndApi.Controllers
             }
         }
 
-        [HttpPut("Atualizar", Name = "PutServico")]
+        [HttpPut(Name = "PutServico")]
+        [Authorize]
         public async Task<ActionResult<RegistroServico>> PutServico(int id, [FromBody] RegistroServiceDto tbEqp_PesDto)
         {
             try
@@ -86,6 +93,7 @@ namespace BackEndApi.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize]
         public async Task<ActionResult<RegistroServiceDto>> Delete(int id)
         {
             try
