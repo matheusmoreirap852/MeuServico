@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoServicoWork.Models;
 using System.Diagnostics;
@@ -13,13 +15,10 @@ namespace ProjetoServicoWork.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
             return View();
         }
 
@@ -27,6 +26,11 @@ namespace ProjetoServicoWork.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private async Task<string> GetAccessToken()
+        {
+            return await HttpContext.GetTokenAsync("access_token");
         }
     }
 }

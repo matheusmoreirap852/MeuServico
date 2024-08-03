@@ -27,7 +27,7 @@ public class IdentityConfiguration
                 // vshop é aplicação web que vai acessar
 
                 // o IdentityServer para obter o token
-                new ApiScope("copaSesc", "VShop Server"),
+                new ApiScope("vshop", "VShop Server"),
                 new ApiScope(name: "read", "Read data."),
                 new ApiScope(name: "write", "Write data."),
                 new ApiScope(name: "delete", "Delete data."),
@@ -49,17 +49,17 @@ public class IdentityConfiguration
                 },
                 new Client
                 {
-                    ClientId = "copaSesc",
-                    ClientSecrets = { new Secret("abracadabra#simsalabim".Sha256()) },
+                    ClientId = "vshop",
+                    ClientSecrets = { new Secret("abracadabra#simsalabim".Sha256())},
                     AllowedGrantTypes = GrantTypes.Code, //via codigo
-                    RedirectUris = { "https://localhost:7243/signin-oidc" }, //login
-                    PostLogoutRedirectUris = { "https://localhost:7243/signout-callback-oidc" }, //logout
+                    RedirectUris = {"https://localhost:44301/signin-oidc"},//login
+                    PostLogoutRedirectUris = {"https://localhost:44301/signout-callback-oidc"},//logout
                     AllowedScopes = new List<string>
                     {
-                       IdentityServerConstants.StandardScopes.OpenId,
-                       IdentityServerConstants.StandardScopes.Profile,
-                       IdentityServerConstants.StandardScopes.Email,
-                       "copaSesc" // O nome do escopo deve ser "vshop"
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email,
+                        "vshop"
                     }
                 }
         };

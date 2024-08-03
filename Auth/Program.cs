@@ -1,13 +1,12 @@
-using ProjetoServicoWork.Auth.Configuration;
-using ProjetoServicoWork.Auth.Data;
-using Duende.IdentityServer.Services;
 using Auth.Data;
 using Auth.Models;
 using Auth.SeedDatabase;
 using Auth.Services;
+using Duende.IdentityServer.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using ProjetoServicoWork.Auth.Configuration;
+using ProjetoServicoWork.Auth.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +39,7 @@ var builderIdentityServer = builder.Services.AddIdentityServer(options =>
                        .AddInMemoryClients(IdentityConfiguration.Clients)
                        .AddAspNetIdentity<ApplicationUser>();
 
-builderIdentityServer.AddDeveloperSigningCredential();
+//builderIdentityServer.AddDeveloperSigningCredential();
 
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddScoped<IDatabaseSeedInitializer, DatabaseIdentityServerInitializer>();

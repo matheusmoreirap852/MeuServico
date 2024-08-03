@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {}
+    "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {
+    "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
         "projectName": "ProjetoServicoWork",
-        "projectPath": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\ProjetoServicoWork\\obj\\",
+        "projectPath": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+        "packagesPath": "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matheus Pessoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,9 +46,49 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Dapper.SqlBuilder": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.5.1, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[9.1.2, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[9.1.2, )"
+            },
+            "alertify": {
+              "target": "Package",
+              "version": "[0.3.11, )"
             }
           },
           "imports": [
@@ -69,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
