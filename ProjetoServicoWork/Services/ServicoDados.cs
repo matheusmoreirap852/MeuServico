@@ -14,8 +14,8 @@ namespace ProjetoServicoWork.Services
         public ServicoDados(IHttpClientFactory httpClientFactory, JsonSerializerOptions options, IConfiguration configuration)
         {
             _httpClientFactory = httpClientFactory;
-            _options = options;
             _configuration = configuration;
+            _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
         public Task Delete(decimal id, string token)
@@ -27,6 +27,7 @@ namespace ProjetoServicoWork.Services
         {
             try
             {
+
                 var registros = await HttpService.SendHttpRequestAsyncList<RegistroServico>(
                                                                         _httpClientFactory,
                                                                         _configuration,

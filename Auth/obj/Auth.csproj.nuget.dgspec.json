@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Auth.csproj": {}
+    "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Auth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Auth.csproj": {
+    "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Auth.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Auth.csproj",
         "projectName": "Auth",
-        "projectPath": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\Auth.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\source\\repos\\ProjetoServicoWork\\Auth\\obj\\",
+        "projectPath": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Auth.csproj",
+        "packagesPath": "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\matheusmoreirap852\\MeuServico\\Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Matheus Pessoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

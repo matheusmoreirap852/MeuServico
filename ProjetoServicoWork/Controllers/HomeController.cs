@@ -15,9 +15,10 @@ namespace ProjetoServicoWork.Controllers
             _logger = logger;
         }
 
-        [Authorize]
+        
         public async Task<IActionResult> Index()
         {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
             return View();
         }
 
@@ -25,6 +26,11 @@ namespace ProjetoServicoWork.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private async Task<string> GetAccessToken()
+        {
+            return await HttpContext.GetTokenAsync("access_token");
         }
     }
 }

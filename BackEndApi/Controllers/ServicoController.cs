@@ -23,7 +23,7 @@ namespace BackEndApi.Controllers
 
 
         [HttpGet(Name = "GetAllServicos")]
-        [Authorize]
+        /*[Authorize]*/
         public async Task<ActionResult<IEnumerable<RegistroServico>>> GetAllServicos()
         {
             try
@@ -42,7 +42,7 @@ namespace BackEndApi.Controllers
 
          
         [HttpGet("{id}", Name = "GetServicoById")]
-        [Authorize]
+        /*[Authorize]*/
         public async Task<ActionResult<RegistroServico>> GetServicoById(decimal id)
         {
             try
@@ -59,7 +59,7 @@ namespace BackEndApi.Controllers
         }
 
         [HttpPost(Name = "PostServico")]
-        [Authorize]
+        /*[Authorize]*/
         public async Task<ActionResult<RegistroServico>> PostServico([FromBody] RegistroServiceDto tbEqp_PesDto)
         {
             try
@@ -76,7 +76,7 @@ namespace BackEndApi.Controllers
         }
 
         [HttpPut(Name = "PutServico")]
-        [Authorize]
+        /*[Authorize]*/
         public async Task<ActionResult<RegistroServico>> PutServico(int id, [FromBody] RegistroServiceDto tbEqp_PesDto)
         {
             try
@@ -93,7 +93,6 @@ namespace BackEndApi.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        [Authorize]
         public async Task<ActionResult<RegistroServiceDto>> Delete(int id)
         {
             try
