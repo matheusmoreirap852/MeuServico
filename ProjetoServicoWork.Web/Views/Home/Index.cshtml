@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    /* Add your preferred styles for the button here */
+    .styled-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #3498db; /* Set your preferred background color */
+        color: #ffffff; /* Set your preferred text color */
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Add additional styles as needed */
+</style>
+
+<h1>Bem vindo a Copa Sesc</h1>
+
+<p>Clique aqui para iniciar cadastro</p>
+<a asp-controller="Servicos" asp-action="Index" class="styled-button">Clique Aqui</a>

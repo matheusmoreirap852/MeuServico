@@ -1,0 +1,302 @@
+﻿ul.pagination li {
+    padding: 5px;
+    margin: 2px;
+    color: black;
+}
+
+.color-write {
+    color: white;
+}
+
+.ValoresDosPenaltis {
+    display: none;
+}
+
+.icons-style {
+    font-style: none;
+    color: black;
+}
+
+.ul-display {
+    outline: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    position: relative;
+}
+
+.sidebar-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.style-button {
+    font-size: 14px;
+}
+
+    .style-button:hover {
+        font-size: 15px;
+        color: #6495ED;
+    }
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.text-color-gray:hover {
+    color: #6495ED;
+}
+
+.bi-arrows-angle-contract {
+    display: none;
+}
+
+.menu-hide {
+    width: 12%;
+}
+
+.collapse:not(.show) {
+    display: block;
+}
+
+.display-none, .div-fase1 {
+    display: none;
+}
+
+.Exception-Alert {
+    color: #e51809;
+    font-size: 12px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-border {
+    border: 3px solid #f1f1f1;
+}
+
+
+/********************* STYLE ************************/
+
+
+body {
+    overflow-x: hidden; /* Evita que o conteúdo horizontalmente fique fora da tela */
+}
+
+.navbar {
+    z-index: 2; /* Aumenta a camada z-index para que a navbar fique acima da sidebar */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1;
+    padding-top: 3.5rem;
+    background-color: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.nav-link {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #212529;
+}
+
+.content {
+    margin-left: 250px; /* Largura da sidebar */
+    padding: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        position: static;
+        display: none; /* Esconde o menu lateral por padrão */
+    }
+
+    .mt-80 {
+        margin-top: 0px;
+    }
+
+    .sidebar.show {
+        display: block; /* Exibe o menu lateral quando a classe "show" é adicionada */
+    }
+
+    .sidebar .nav-link {
+        padding: 0.5rem;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 1rem;
+    }
+}
+
+
+/*****************************iNDEX STYLE***********************************************/
+
+.flex-column {
+    display: flex;
+}
+
+.bck-gray {
+    transition: 0.3s;
+    color: write;
+}
+
+    .bck-gray:hover {
+        background: gray;
+    }
+
+.btn-outline-danger-btn:hover {
+    text-align: right;
+    background-color: #f8f9fa;
+    border: none;
+    color: #212529;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-outline-danger-btn {
+    text-align: right;
+    background-color: #f8f9fa;
+    border: none;
+    color: #212529;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+
+.welcome-section {
+    background-color: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+}
+
+    .welcome-section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .welcome-section p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-register {
+    display: inline-block;
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    flex: 0 0 45%;
+}
+
+    .btn-register:hover {
+        color: #fff;
+        background-color: #225b8d;
+    }
+
+@media (max-width: 768px) {
+    .btn-register {
+        flex-basis: 100%;
+    }
+
+    .welcome-section h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .form-responsive {
+        width: 100%;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+
+/* Estilos básicos para o dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos adicionais para melhorar a aparência */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+/* Style for the table */
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}

@@ -39,14 +39,14 @@ builder.Services.AddAuthentication(options =>
 
         options.Authority = builder.Configuration["ServiceUri:IdentityServer"];
         options.GetClaimsFromUserInfoEndpoint = true;
-        options.ClientId = "vshop";
+        options.ClientId = "copaSesc";
         options.ClientSecret = builder.Configuration["Client:Secret"];
         options.ResponseType = "code";
         options.ClaimActions.MapJsonKey("role", "role", "role");
         options.ClaimActions.MapJsonKey("sub", "sub", "sub");
         options.TokenValidationParameters.NameClaimType = "name";
         options.TokenValidationParameters.RoleClaimType = "role";
-        options.Scope.Add("vshop");
+        options.Scope.Add("copaSesc");
         options.SaveTokens = true;
     }
 );

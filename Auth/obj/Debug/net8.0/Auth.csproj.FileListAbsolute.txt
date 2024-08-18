@@ -311,3 +311,13 @@ C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth\obj\Debu
 C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth\obj\Debug\net8.0\Auth.pdb
 C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth\obj\Debug\net8.0\Auth.genruntimeconfig.cache
 C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth\obj\Debug\net8.0\ref\Auth.dll
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.csproj.AssemblyReference.cache
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.AssemblyInfoInputs.cache
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.AssemblyInfo.cs
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.csproj.CoreCompileInputs.cache
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.RazorAssemblyInfo.cache
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.RazorAssemblyInfo.cs
+C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\obj\Debug\net8.0\Auth.sourcelink.json

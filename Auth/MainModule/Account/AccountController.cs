@@ -23,6 +23,7 @@ using Auth.Data;
 using Auth.Models;
 using Auth.Services;
 
+
 namespace IdentityServerHost.Quickstart.UI
 {
     /// <summary>
@@ -71,7 +72,7 @@ namespace IdentityServerHost.Quickstart.UI
             _schemeProvider = schemeProvider;
             _identityProviderStore = identityProviderStore;
             _events = events;
-            _emailSender = emailSender; 
+            _emailSender = emailSender;
         }
 
 
@@ -199,7 +200,7 @@ namespace IdentityServerHost.Quickstart.UI
                     }
                 }
 
-                await _events.RaiseAsync(new UserLoginFailureEvent(model.Username, "invalid credentials", clientId:context?.Client.ClientId));
+                await _events.RaiseAsync(new UserLoginFailureEvent(model.Username, "invalid credentials", clientId: context?.Client.ClientId));
                 ModelState.AddModelError(string.Empty, AccountOptions.InvalidCredentialsErrorMessage);
             }
 
@@ -208,7 +209,7 @@ namespace IdentityServerHost.Quickstart.UI
             return View(vm);
         }
 
-        
+
         /// <summary>
         /// Show logout page
         /// </summary>
@@ -391,7 +392,7 @@ namespace IdentityServerHost.Quickstart.UI
                 var idp = User.FindFirst(JwtClaimTypes.IdentityProvider)?.Value;
                 if (idp != null && idp != Duende.IdentityServer.IdentityServerConstants.LocalIdentityProvider)
                 {
-                    /*//var providerSupportsSignout = await HttpContext.GetSchemeSupportsSignOutAsync(idp);
+                    var providerSupportsSignout = await HttpContext.GetSchemeSupportsSignOutAsync(idp);
                     if (providerSupportsSignout)
                     {
                         if (vm.LogoutId == null)
@@ -403,7 +404,7 @@ namespace IdentityServerHost.Quickstart.UI
                         }
 
                         vm.ExternalAuthenticationScheme = idp;
-                    }*/
+                    }
                 }
             }
 
@@ -420,7 +421,7 @@ namespace IdentityServerHost.Quickstart.UI
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
-            
+
             if (ModelState.IsValid)
             {
                 var user = await _userManager.GetUserAsync(User);
@@ -555,7 +556,7 @@ namespace IdentityServerHost.Quickstart.UI
 
                 if (emailExists)
                 {
-                    ViewBag.EmailError = "Email já existe "+ model.Email;
+                    ViewBag.EmailError = "Email já existe " + model.Email;
                     ModelState.AddModelError(nameof(model.Email), "O e-mail já está em uso.");
                     return View(model);
                 }

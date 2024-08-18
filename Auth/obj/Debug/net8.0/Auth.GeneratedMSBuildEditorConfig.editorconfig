@@ -9,123 +9,123 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Auth
 build_property.RootNamespace = Auth
-build_property.ProjectDir = C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth\
+build_property.ProjectDir = C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\Auth
+build_property.MSBuildProjectDirectory = C:\Users\Matheus Pessoa\source\repos\MeuServico\Auth
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/AccessDenied.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/ChangePassword.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/CriarUsuario.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/CriarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmlhclVzdWFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/EmailEnviado.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/EmailEnviado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFbWFpbEVudmlhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/LoggedOut.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/LoggedOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dnZWRPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/Login.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/Logout.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/RecuperarSenha.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/RecuperarSenha.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWN1cGVyYXJTZW5oYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/RecuperaSenhaEmail.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/RecuperaSenhaEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWN1cGVyYVNlbmhhRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/RedefinirSenha.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/RedefinirSenha.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWRlZmluaXJTZW5oYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Account/UsuarioCriado.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Account/UsuarioCriado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc3VhcmlvQ3JpYWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Consent/Index.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Consent/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc2VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Device/Success.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Device/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXFN1Y2Nlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Device/UserCodeCapture.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Device/UserCodeCapture.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXFVzZXJDb2RlQ2FwdHVyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Device/UserCodeConfirmation.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Device/UserCodeConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXFVzZXJDb2RlQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Diagnostics/Index.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Diagnostics/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhZ25vc3RpY3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Grants/Index.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Grants/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JhbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Home/Index.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Home/Privacy.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/Error.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/Redirect.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/Redirect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZGlyZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/_Nav.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/_Nav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/_ScopeListItem.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/_ScopeListItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TY29wZUxpc3RJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/_ValidationSummary.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/_ValidationSummary.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/_ViewImports.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/_ViewStart.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matheus Pessoa/source/repos/matheusmoreirap852/MeuServico/Auth/Views/Shared/_Layout.cshtml]
+[C:/Users/Matheus Pessoa/source/repos/MeuServico/Auth/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bo6crti9e2

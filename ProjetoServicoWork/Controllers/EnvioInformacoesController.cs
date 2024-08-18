@@ -32,6 +32,7 @@ namespace ProjetoServicoWork.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> IndexAsync(int? id, int? pagina, string? filter)
         {
 
