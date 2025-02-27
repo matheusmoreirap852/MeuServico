@@ -421,3 +421,7 @@ C:\Users\Matheus Pessoa\source\repos\MeuServico\BackEndApi\obj\Debug\net8.0\refi
 C:\Users\Matheus Pessoa\source\repos\MeuServico\BackEndApi\obj\Debug\net8.0\BackEndApi.pdb
 C:\Users\Matheus Pessoa\source\repos\MeuServico\BackEndApi\obj\Debug\net8.0\BackEndApi.genruntimeconfig.cache
 C:\Users\Matheus Pessoa\source\repos\MeuServico\BackEndApi\obj\Debug\net8.0\ref\BackEndApi.dll
+C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\BackEndApi\bin\Debug\net8.0\BackEndApi.staticwebassets.endpoints.json
+C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\BackEndApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\BackEndApi\obj\Debug\net8.0\staticwebassets\msbuild.BackEndApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Matheus Pessoa\source\repos\matheusmoreirap852\MeuServico\BackEndApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -38,8 +38,6 @@ namespace BackEndApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
          
         [HttpGet("{id}", Name = "GetServicoById")]
         /*[Authorize]*/

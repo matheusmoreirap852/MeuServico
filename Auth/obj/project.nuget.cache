@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fiFrwlYMc2M=",
+  "dgSpecHash": "Q9Ep53gPPf4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Pessoa\\source\\repos\\MeuServico\\Auth\\Auth.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Auth.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\duende.identityserver\\6.3.6\\duende.identityserver.6.3.6.nupkg.sha512",
     "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\duende.identityserver.aspnetidentity\\6.3.6\\duende.identityserver.aspnetidentity.6.3.6.nupkg.sha512",
