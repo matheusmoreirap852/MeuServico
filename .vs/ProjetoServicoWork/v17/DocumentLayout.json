@@ -3,24 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\projetoservicowork\\controllers\\envioinformacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\controllers\\envioinformacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\projetoservicowork\\views\\envioinformacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\views\\envioinformacoes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\dtos\\registroservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\dtos\\registroservicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\repositories\\minhainformacoesrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\repositories\\minhainformacoesrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\migrations\\20240401191707_dados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\migrations\\20240401191707_dados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\migrations\\20240401191707_dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\migrations\\20240401191707_dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42DA0F1B-A020-4C81-8F98-4D54AB8F285E}|Auth\\Auth.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\auth\\services\\authmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42DA0F1B-A020-4C81-8F98-4D54AB8F285E}|Auth\\Auth.csproj|solutionrelative:auth\\services\\authmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\controllers\\servicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\projetoservicowork\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\models\\registroservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\projetoservicowork\\views\\envioinformacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\views\\envioinformacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\projetoservicowork\\services\\servicodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13FF03A8-B49C-4BA6-B2A4-8BEB1AED4532}|ProjetoServicoWork\\ProjetoServicoWork.csproj|solutionrelative:projetoservicowork\\services\\servicodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\migrations\\20240401191707_dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\migrations\\20240401191707_dados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\repositories\\irepositories\\iminhainformacoesrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\repositories\\irepositories\\iminhainformacoesrepositorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\roles\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\roles\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\context\\dbsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\context\\dbsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|c:\\users\\matheus pessoa\\source\\repos\\matheusmoreirap852\\meuservico\\backendapi\\migrations\\20240401191707_dados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA023401-F1C6-4FAA-B664-DBD604978C66}|BackEndApi\\BackEndApi.csproj|solutionrelative:backendapi\\migrations\\20240401191707_dados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,33 +142,176 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegistroServiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Dtos\\RegistroServiceDto.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Dtos\\RegistroServiceDto.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Dtos\\RegistroServiceDto.cs",
+              "RelativeToolTip": "BackEndApi\\Dtos\\RegistroServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T06:24:56.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Views\\EnvioInformacoes\\Create.cshtml",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\Views\\EnvioInformacoes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Views\\EnvioInformacoes\\Create.cshtml",
+              "RelativeToolTip": "ProjetoServicoWork\\Views\\EnvioInformacoes\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAawB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-27T05:32:19.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistroServico.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Models\\RegistroServico.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Models\\RegistroServico.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Models\\RegistroServico.cs",
+              "RelativeToolTip": "BackEndApi\\Models\\RegistroServico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:30:36.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServicoController.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Controllers\\ServicoController.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Controllers\\ServicoController.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Controllers\\ServicoController.cs",
+              "RelativeToolTip": "BackEndApi\\Controllers\\ServicoController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:21:40.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EnvioInformacoesController.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Controllers\\EnvioInformacoesController.cs",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\Controllers\\EnvioInformacoesController.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Controllers\\EnvioInformacoesController.cs",
+              "RelativeToolTip": "ProjetoServicoWork\\Controllers\\EnvioInformacoesController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwDsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:33:17.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthMessageSender.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Services\\AuthMessageSender.cs",
+              "RelativeDocumentMoniker": "Auth\\Services\\AuthMessageSender.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Services\\AuthMessageSender.cs",
+              "RelativeToolTip": "Auth\\Services\\AuthMessageSender.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAnwD0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:22:55.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServicoDados.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Services\\ServicoDados.cs",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\Services\\ServicoDados.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Services\\ServicoDados.cs",
+              "RelativeToolTip": "ProjetoServicoWork\\Services\\ServicoDados.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAewC4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:32:03.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MinhaInformacoesRepositorie.cs",
               "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Repositories\\MinhaInformacoesRepositorie.cs",
               "RelativeDocumentMoniker": "BackEndApi\\Repositories\\MinhaInformacoesRepositorie.cs",
               "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Repositories\\MinhaInformacoesRepositorie.cs",
               "RelativeToolTip": "BackEndApi\\Repositories\\MinhaInformacoesRepositorie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T05:23:00.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240401191707_dados.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
-              "RelativeDocumentMoniker": "BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
-              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
-              "RelativeToolTip": "BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T05:22:58.935Z",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Views\\EnvioInformacoes\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\Views\\EnvioInformacoes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Views\\EnvioInformacoes\\Index.cshtml",
+              "RelativeToolTip": "ProjetoServicoWork\\Views\\EnvioInformacoes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-27T05:32:20.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "RegistroServico.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Models\\RegistroServico.cs",
+              "RelativeDocumentMoniker": "ProjetoServicoWork\\Models\\RegistroServico.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\ProjetoServicoWork\\Models\\RegistroServico.cs",
+              "RelativeToolTip": "ProjetoServicoWork\\Models\\RegistroServico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:55:21.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IMinhaInformacoesRepositorie.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Repositories\\IRepositories\\IMinhaInformacoesRepositorie.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Repositories\\IRepositories\\IMinhaInformacoesRepositorie.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Repositories\\IRepositories\\IMinhaInformacoesRepositorie.cs",
+              "RelativeToolTip": "BackEndApi\\Repositories\\IRepositories\\IMinhaInformacoesRepositorie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:30:27.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Roles\\Role.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Roles\\Role.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Roles\\Role.cs",
+              "RelativeToolTip": "BackEndApi\\Roles\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:30:25.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BackEndApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BackEndApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-27T05:30:18.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "20240401191707_dados.cs",
               "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Migrations\\20240401191707_dados.cs",
               "RelativeDocumentMoniker": "BackEndApi\\Migrations\\20240401191707_dados.cs",
@@ -133,28 +324,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthMessageSender.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Services\\AuthMessageSender.cs",
-              "RelativeDocumentMoniker": "Auth\\Services\\AuthMessageSender.cs",
-              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\Auth\\Services\\AuthMessageSender.cs",
-              "RelativeToolTip": "Auth\\Services\\AuthMessageSender.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAzwBkAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "BackEndApi\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T05:22:55.911Z",
+              "WhenOpened": "2025-02-27T05:30:11.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ServicoController.cs",
-              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Controllers\\ServicoController.cs",
-              "RelativeDocumentMoniker": "BackEndApi\\Controllers\\ServicoController.cs",
-              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Controllers\\ServicoController.cs*",
-              "RelativeToolTip": "BackEndApi\\Controllers\\ServicoController.cs*",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "DbSession.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Context\\DbSession.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Context\\DbSession.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Context\\DbSession.cs",
+              "RelativeToolTip": "BackEndApi\\Context\\DbSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T05:21:40.366Z",
+              "WhenOpened": "2025-02-27T05:30:14.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20240401191707_dados.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
+              "RelativeDocumentMoniker": "BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
+              "ToolTip": "C:\\Users\\Matheus Pessoa\\source\\repos\\matheusmoreirap852\\MeuServico\\BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
+              "RelativeToolTip": "BackEndApi\\Migrations\\20240401191707_dados.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T05:22:58.935Z",
               "EditorCaption": ""
             }
           ]

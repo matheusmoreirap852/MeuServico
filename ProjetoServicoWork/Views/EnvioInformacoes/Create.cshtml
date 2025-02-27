@@ -8,64 +8,63 @@
     <span> Equipe @ViewBag.NomeEquipe</span>
 </div>
 
+@if (!string.IsNullOrEmpty(ViewBag.Erro as string))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Erro
+    </div>
+}
 
-<span class="Exception-Alert">
-    @ViewBag.Erro
-    @{
-        var erro = TempData["Erro"] as string;
-    }
-
-    @if (!string.IsNullOrEmpty(erro))
-    {
-        <div class="alert alert-danger" role="alert">
-            @erro
-        </div>
-    }
-</span>
+@if (TempData["Erro"] is string erro && !string.IsNullOrEmpty(erro))
+{
+    <div class="alert alert-danger" role="alert">
+        @erro
+    </div>
+}
 
 <form asp-action="CreateDados" id="myForm" method="post">
     <div class="container">
         <div class="form-group col-md-5 col-lg-5">
             <label asp-for="LinhaTempo" class="control-label">Linha do tempo</label>
-            <select onchange="AlteraLabelTipoDocumento();" asp-for="LinhaTempo" class="form-control" required>
-                <option value="" disabled="" selected>Selecione</option>
-                <option value="Passado">Passado</option>
-                <option value="Presente">Presente</option>
-                <option value="Futuro">Futuro</option>
+            <select asp-for="LinhaTempo" asp-items="ViewBag.LinhasTempo" class="form-control" required>
+                <option value="" disabled>Selecione</option>
             </select>
+
+
         </div>
+
         <div class="row">
             <div class="form-group col-md-6 col-lg-6">
-                <label asp-for="Titulo" id="pesNumDocLabel" class="control-label">Título</label>
-                <input asp-for="Titulo" type="text" id="pesNumDoc" class="form-control" required />
+                <label asp-for="Titulo" class="control-label">Título</label>
+                <input asp-for="Titulo" type="text" class="form-control" required />
                 <span asp-validation-for="Titulo" class="text-danger"></span>
             </div>
+
             <div class="form-group col-md-6 col-lg-6">
                 <label asp-for="Descricao" class="control-label">Descrição</label>
-                <input name="Descricao" id="Descricao" class="form-control" />
+                <input asp-for="Descricao" class="form-control" required />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
         </div>
+
         <div class="row">
             <div class="form-group col-md-6 col-lg-6">
                 <label asp-for="Anotacoes" class="control-label">Anotações</label>
-                <input name="Anotacoes" id="Anotacoes" class="form-control" />
+                <input asp-for="Anotacoes" class="form-control" required />
                 <span asp-validation-for="Anotacoes" class="text-danger"></span>
             </div>
         </div>
-        @{
-            var name = User.Claims.FirstOrDefault(t => t.Type == "name")?.Value;
-            var splitName = name?.Split(" ");
-            var firstName = (splitName?.Count() > 1 ? splitName[0] : splitName?.Count() > 0 ? name : " - ");
-        }
-        <div class="display-none">
-            <input type="text" placeholder="Usuario" name="modEvtUsu" value="@name" readonly />
-            <input type="text" placeholder="Usuario" name="idEvt" value="@ViewBag.idEvento" readonly />
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button style="background-color:blue" type="button" class="cancelbtn" onclick="enableAndSubmit()">Cadastro</button>
 
-            <button style="background-color:blue" class="cancelbtn" onclick="voltarPagina()" class="voltar">Voltar</button>
+        @{
+            var name = User.Claims.FirstOrDefault(t => t.Type == "name")?.Value ?? " - ";
+        }
+
+        <input type="hidden" name="modEvtUsu" value="@name" />
+        <input type="hidden" name="idEvt" value="@ViewBag.idEvento" />
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button style="background-color:blue" type="submit" class="btn btn-primary">Cadastro</button>
+            <button type="button" class="btn btn-secondary" onclick="voltarPagina()">Voltar</button>
         </div>
     </div>
 </form>

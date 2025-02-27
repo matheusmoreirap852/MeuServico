@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ProjetoServicoWork.Models;
 using ProjetoServicoWork.Services.Contracts;
 using X.PagedList;
@@ -51,7 +52,15 @@ namespace ProjetoServicoWork.Controllers
         [HttpGet]
         public async Task<IActionResult> Create(int id)
         {
-            return View();  
+            var ListServico = await _servicoDados.GetAllId(id.ToString(), SessionKeyId);
+            ViewBag.LinhasTempo = new List<SelectListItem>
+            {
+                new SelectListItem { Value = "Passado", Text = "Passado" },
+                new SelectListItem { Value = "Presente", Text = "Presente" },
+                new SelectListItem { Value = "Futuro", Text = "Futuro" }
+            };  
+
+            return View(ListServico);  
         }
 
         [HttpPost]

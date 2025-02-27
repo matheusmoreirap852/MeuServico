@@ -79,7 +79,6 @@ public class AuthMessageSender : IEmailSender
 
                 MailMessage mail = new MailMessage();
                 // Obtem os anexos contidos em um arquivo arraylist e inclui na mensagem
-                
 
                 mail.From = new MailAddress(_emailSettings.FromEmail);
                 mail.To.Add(new MailAddress(_emailSettings.ToEmail));
