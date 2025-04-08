@@ -19,7 +19,7 @@ namespace ProjetoServicoWork.Controllers
             IConfiguration configuration,
             IWebHostEnvironment webHostEnvironment,
             IServicoDados servicoDados)
-        {   
+        {
 
             _configuration = configuration;
             _webHostEnvironment = webHostEnvironment;
@@ -32,13 +32,11 @@ namespace ProjetoServicoWork.Controllers
 
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> IndexAsync(int? id, int? pagina, string? filter)
         {
 
             const int itensPorPagina = 10;
             int numeroPagina = pagina ?? 1;
-            // Obtenha o token JWT
             var accessToken = await HttpContext.GetTokenAsync("access_token");
 
             var ListServico = await _servicoDados.GetAll(accessToken);
@@ -51,7 +49,7 @@ namespace ProjetoServicoWork.Controllers
         [HttpGet]
         public async Task<IActionResult> Create(int id)
         {
-            return View();  
+            return View();
         }
 
         [HttpPost]
@@ -60,13 +58,28 @@ namespace ProjetoServicoWork.Controllers
             try
             {
                 var criarInformações = await _servicoDados.CreateServico(registroServico, null);
-                return View(registroServico);
+                return RedirectToAction("Index", "EnvioInformacoes");
             }
             catch (Exception ex)
             {
                 return View("Error");
             }
-            
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                // Chama o método Delete diretamente sem armazenar o resultado
+                await _servicoDados.Delete(id, null);
+                return RedirectToAction("Index", "EnvioInformacoes");
+            }
+            catch (Exception ex)
+            {
+                // Caso ocorra algum erro inesperado
+                return View("Error");
+            }
         }
 
     }

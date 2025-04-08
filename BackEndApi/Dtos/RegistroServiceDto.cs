@@ -9,7 +9,7 @@ public class RegistroServiceDto
     public int Id { get; set; }
 
     [Required(ErrorMessage = "O título é obrigatório.")]
-    [StringLength(50, ErrorMessage = "O título deve ter no máximo 50 caracteres.")]
+    [StringLength(300, ErrorMessage = "O título deve ter no máximo 50 caracteres.")]
     public string Titulo { get; set; }
 
     [Required(ErrorMessage = "A descrição é obrigatória.")]

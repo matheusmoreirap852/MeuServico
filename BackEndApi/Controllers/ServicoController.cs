@@ -28,7 +28,10 @@ namespace BackEndApi.Controllers
         {
             try
             {
-                var dadosDto = await _minhaInformacoes.GetAll();
+              var dadosDto = (await _minhaInformacoes.GetAll())  // Aguardar a Task para obter o IEnumerable
+                    .OrderByDescending(x => x.Id)   // Ordenar os dados por DataCadastro
+                    .ToList();     
+
                 if (dadosDto == null)
                     return NotFound("Atletas not found");
                 return Ok(dadosDto);
@@ -101,7 +104,7 @@ namespace BackEndApi.Controllers
                     return NotFound("Atleta not found");
                 }
                 await _minhaInformacoes.DeleteById(id);
-                return Ok(dados);
+                return Ok();
             }
             catch (Exception ex)
             {

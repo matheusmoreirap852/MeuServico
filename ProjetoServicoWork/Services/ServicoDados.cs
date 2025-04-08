@@ -18,16 +18,27 @@ namespace ProjetoServicoWork.Services
             _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
         }
 
-        public Task Delete(decimal id, string token)
+        public async Task<bool> Delete(decimal id, string token)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Enviando uma requisição DELETE
+                var delete = await HttpService.SendHttpRequestAsync<RegistroServico>(_httpClientFactory, _configuration, "/api/Servico/" + id, token, HttpMethod.Delete);
+                
+                // Retorne true se a requisição for bem-sucedida (dependendo da resposta da API)
+                return delete != null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in DeleteAsync:  {ex.Message}");
+                return false;
+            }
         }
 
         public async Task<IEnumerable<RegistroServico>?> GetAll(string token)
         {
             try
             {
-
                 var registros = await HttpService.SendHttpRequestAsyncList<RegistroServico>(
                                                                         _httpClientFactory,
                                                                         _configuration,
@@ -49,7 +60,8 @@ namespace ProjetoServicoWork.Services
             try
             {
                 return await HttpService.SendHttpRequestAsync<RegistroServico>(_httpClientFactory, _configuration, "/api/Servico/" + id, token, HttpMethod.Get);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine($"Error in GetId:  {ex.Message}");
                 return null;
@@ -62,11 +74,12 @@ namespace ProjetoServicoWork.Services
             {
                 return await HttpService.SendHttpRequestAsync<RegistroServico>(_httpClientFactory,
                     _configuration,
-                    "api/Servico/Criar",
+                    "api/Servico",
                     token,
                     HttpMethod.Post,
                     registroServico);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 return null;
@@ -83,11 +96,17 @@ namespace ProjetoServicoWork.Services
                     token,
                     HttpMethod.Put,
                     registroServico);
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 return null;
             }
+        }
+
+        Task IServicoDados.Delete(decimal id, string token)
+        {
+            return Delete(id, token);
         }
     }
 }

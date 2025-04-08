@@ -61,6 +61,7 @@ namespace BackEndApi.Service
             try
             {
                 var ValorEntity = _mapper.Map<RegistroServico>(dados);
+                ValorEntity.DataCadastro = DateTime.Now;
                 await _minhaInformacoes.Set(ValorEntity);
                 dados.Id = ValorEntity.Id;
                 return dados;
