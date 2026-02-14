@@ -4,7 +4,7 @@ using BackEndApi.Repositories;
 using BackEndApi.Repositories.IRepositories;
 using BackEndApi.Service;
 using BackEndApi.Service.IService;
-using Microsoft.Data.SqlClient;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -66,15 +66,15 @@ builder.Services.AddSwaggerGen(c =>
 // Adicione o serviço IDbConnection ao contêiner de injeção de dependência
 builder.Services.AddScoped<IDbConnection>(provider =>
 {
-    var connectionString = configuration.GetConnectionString("Padrao"); // Obtém a string de conexão do appsettings.json
-    return new SqlConnection(connectionString); // Crie e retorne uma instância de SqlConnection
+    var connectionString = configuration.GetConnectionString("Padrao");
+    return new SqliteConnection(connectionString);
 });
-
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(configuration.GetConnectionString("Padrao"));
-}, ServiceLifetime.Scoped);
+    options.UseSqlite(configuration.GetConnectionString("Padrao"));
+});
+
 
 
 
