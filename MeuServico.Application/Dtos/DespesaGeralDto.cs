@@ -17,7 +17,6 @@ namespace MeuServico.Application.Dtos
 
         // Relacionamento opcional com carro
         public int? CarroId { get; set; }
-        public Carro? Carro { get; set; }
 
         public string Observacao { get; set; }
     }

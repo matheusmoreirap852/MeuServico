@@ -19,6 +19,7 @@ namespace MeuServico.Infrastructure.Persistence
         public DbSet<DespesaGeral> DespesasGerais { get; set; }
         public DbSet<HistoricoValorVenal> HistoricoValorVenal { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        
 
         // =============================
         // CONFIGURAÇÕES

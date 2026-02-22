@@ -1,5 +1,7 @@
 using MeuServico.Application.Mappings;
 using MeuServico.Infrastructure;
+using MeuServico.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +15,7 @@ builder.Services.AddSwaggerGen();
 // Clean Architecture
 builder.Services.AddInfrastructure(builder.Configuration);
 
-// ✅ AutoMapper (.NET 10 / v16)
+// AutoMapper
 builder.Services.AddAutoMapper(
     cfg => { },
     typeof(MappingProfile).Assembly
@@ -37,5 +39,15 @@ app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 
 app.MapControllers();
+
+
+// ✅ AUTO MIGRATION (LOCAL CORRETO)
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext =
+        scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    dbContext.Database.Migrate();
+}
 
 app.Run();

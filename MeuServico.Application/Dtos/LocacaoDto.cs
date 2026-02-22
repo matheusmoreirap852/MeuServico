@@ -12,11 +12,9 @@ namespace MeuServico.Application.Dtos
         // RELACIONAMENTOS
         // ===============================
         public int CarroId { get; set; }
-        public Carro Carro { get; set; }
 
         public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
-
+        
         // ===============================
         // PERÍODO
         // ===============================

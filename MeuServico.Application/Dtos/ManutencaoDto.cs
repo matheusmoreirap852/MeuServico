@@ -1,4 +1,4 @@
-﻿using MeuServico.Core.Entities;
+﻿
 using MeuServico.Core.Enums;
 
 namespace MeuServico.Application.Dtos
@@ -9,7 +9,6 @@ namespace MeuServico.Application.Dtos
 
         // Relacionamento com Carro
         public int CarroId { get; set; }
-        public Carro Carro { get; set; }
 
         // Informações da manutenção
         public TipoManutencao Tipo { get; set; }

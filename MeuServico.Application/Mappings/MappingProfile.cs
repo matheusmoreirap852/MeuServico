@@ -12,6 +12,8 @@ namespace MeuServico.Application.Mappings
             CreateMap<Manutencao, ManutencaoDto>().ReverseMap();
             CreateMap<DespesaGeral, DespesaGeralDto>().ReverseMap();
             CreateMap<Locacao, LocacaoDto>().ReverseMap();
+            CreateMap<Empresa, EmpresaDto>().ReverseMap();
+            CreateMap<Cliente, ClienteDto>().ReverseMap();
         }
     }
 }
