@@ -1,0 +1,26 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace MeuServico.Application.Dtos;
+
+public class RegistroServiceDto
+{
+    [Key]
+    public int Id { get; set; }
+
+    [Required(ErrorMessage = "O título é obrigatório.")]
+    [StringLength(50, ErrorMessage = "O título deve ter no máximo 50 caracteres.")]
+    public string Titulo { get; set; }
+
+    [Required(ErrorMessage = "A descrição é obrigatória.")]
+    [StringLength(300, ErrorMessage = "A descrição deve ter no máximo 200 caracteres.")]
+    public string Descricao { get; set; }
+
+    [StringLength(300, ErrorMessage = "As anotações devem ter no máximo 50 caracteres.")]
+    public string Anotacoes { get; set; }
+
+    public string? LinhaTempo { get; set; }
+
+    public DateTime? DataCadastro { get; set; } = DateTime.Now;
+}
+
