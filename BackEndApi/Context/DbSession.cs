@@ -13,6 +13,7 @@ namespace BackEndApi.Context
 
             Connection.Open();
         }
+
         public void Dispose() => Connection.Dispose();
     }
 }

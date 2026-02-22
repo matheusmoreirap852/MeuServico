@@ -7,11 +7,11 @@ namespace BackEndApi.Models
     {
         public int Id { get; set; }
 
+        // =============================
+        // IDENTIFICAÇÃO
+        // =============================
         [Required, StringLength(10)]
         public string Placa { get; set; } = default!;
-        public decimal? ValorSeguro { get; set; }
-        public decimal? ValorIPVAAnual { get; set; }
-
 
         [Required, StringLength(60)]
         public string Marca { get; set; } = default!;
@@ -24,28 +24,59 @@ namespace BackEndApi.Models
         [StringLength(30)]
         public string? Cor { get; set; }
 
+        // =============================
+        // EMPRESA (MULTIEMPRESA)
+        // =============================
+        public int EmpresaId { get; set; }
+        public Empresa Empresa { get; set; } = default!;
+
+        // =============================
+        // CONTROLE OPERACIONAL
+        // =============================
         public int KmAtual { get; set; }
 
-        // 🔹 Financeiro
+        public StatusCarro Status { get; set; }
+            = StatusCarro.Disponivel;
+
+        // =============================
+        // FINANCEIRO
+        // =============================
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorPago { get; set; }   // Valor que ele pagou no carro
+        public decimal ValorPago { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorVenal { get; set; }  // Valor FIPE / mercado
+        public decimal ValorVenal { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal? ValorVenda { get; set; } // Caso ele venda futuramente
+        public decimal? ValorVenda { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal? ValorSeguro { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal? ValorIPVAAnual { get; set; }
 
         public DateTime DataCompra { get; set; }
 
-       // public StatusCarro Status { get; set; } = StatusCarro.Disponivel;
+        // =============================
+        // AUDITORIA
+        // =============================
+        public DateTime CriadoEm { get; set; }
+            = DateTime.UtcNow;
 
-        public DateTime CriadoEm { get; set; } = DateTime.UtcNow;
-        public DateTime AtualizadoEm { get; set; } = DateTime.UtcNow;
+        public DateTime AtualizadoEm { get; set; }
+            = DateTime.UtcNow;
 
-        // Navegação
-        public ICollection<Locacao> Locacoes { get; set; } = new List<Locacao>();
-        public ICollection<Manutencao> Manutencoes { get; set; } = new List<Manutencao>();
-        public ICollection<DespesaGeral> Despesas { get; set; } = new List<DespesaGeral>();
+        // =============================
+        // NAVEGAÇÃO
+        // =============================
+        public ICollection<Locacao> Locacoes { get; set; }
+            = new List<Locacao>();
+
+        public ICollection<Manutencao> Manutencoes { get; set; }
+            = new List<Manutencao>();
+
+        public ICollection<DespesaGeral> Despesas { get; set; }
+            = new List<DespesaGeral>();
     }
 }

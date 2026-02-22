@@ -1,6 +1,8 @@
 using BackEndApi.Context;
+using BackEndApi.Dtos;
 using BackEndApi.Dtos.Mappings;
 using BackEndApi.Repositories;
+using BackEndApi.Repositories.Base;
 using BackEndApi.Repositories.IRepositories;
 using BackEndApi.Service;
 using BackEndApi.Service.IService;
@@ -10,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Data;
 using System.Text.Json.Serialization;
+using BackEndApi.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +34,7 @@ builder.Services.AddControllers()
     });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -81,6 +85,18 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IMinhaInformacoesRepositorie, MinhaInformacoesRepositorie>();
 builder.Services.AddScoped<IMinhaInformacoes, MinhaInformacoesService>();
 
+
+builder.Services.AddScoped(typeof(IBaseRepository<>),
+                           typeof(BaseRepository<>));
+
+
+// ==========================
+// SERVICES AUTO CRUD
+// ==========================
+builder.Services.AddScoped<IBaseService<CarroDto>, CarroService>();
+builder.Services.AddScoped<IBaseService<ManutencaoDto>, ManutencaoService>();
+builder.Services.AddScoped<IBaseService<DespesaGeralDto>, DespesaGeralService>();
+builder.Services.AddScoped<IBaseService<LocacaoDto>, LocacaoService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
