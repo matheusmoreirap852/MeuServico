@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.Sqlite;
+
 using System.Data;
 
 namespace BackEndApi.Context
@@ -8,9 +9,11 @@ namespace BackEndApi.Context
         public IDbConnection Connection { get; }
         public DbSession(IConfiguration configuration)
         {
-            Connection = new SqlConnection(configuration.GetConnectionString("Padrao"));
+            Connection = new SqliteConnection(configuration.GetConnectionString("Padrao"));
+
             Connection.Open();
         }
+
         public void Dispose() => Connection.Dispose();
     }
 }

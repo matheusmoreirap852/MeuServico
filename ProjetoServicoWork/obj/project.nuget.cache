@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Loc/ZyltzP4=",
+  "dgSpecHash": "39tHvFIKl+Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\alertify\\0.3.11\\alertify.0.3.11.nupkg.sha512",
     "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",

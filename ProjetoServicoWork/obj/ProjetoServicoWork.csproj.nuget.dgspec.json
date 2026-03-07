@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {}
+    "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {
+    "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
         "projectName": "ProjetoServicoWork",
-        "projectPath": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
+        "projectPath": "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\ProjetoServicoWork.csproj",
         "packagesPath": "C:\\Users\\Matheus Pessoa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Pessoa\\Source\\Repos\\MeuServico\\ProjetoServicoWork\\obj\\",
+        "outputPath": "C:\\Users\\Matheus Pessoa\\ProjetoMarcos\\MeuServico\\ProjetoServicoWork\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -114,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

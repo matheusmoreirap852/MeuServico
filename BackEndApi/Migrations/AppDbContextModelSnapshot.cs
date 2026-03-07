@@ -3,7 +3,6 @@ using System;
 using BackEndApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -16,38 +15,406 @@ namespace BackEndApi.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            modelBuilder.Entity("BackEndApi.Models.Carro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Ano")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("AtualizadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Cor")
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCompra")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("EmpresaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("KmAtual")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Placa")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal?>("ValorIPVAAnual")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ValorPago")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("ValorSeguro")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ValorVenal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("ValorVenda")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmpresaId");
+
+                    b.HasIndex("Placa")
+                        .IsUnique();
+
+                    b.ToTable("Carros");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CNH")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("ValidadeCNH")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.DespesaGeral", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("CarroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataDespesa")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Observacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("TipoDespesa")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarroId");
+
+                    b.ToTable("DespesasGerais");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Empresa", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Cnpj")
+                        .HasMaxLength(18)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Endereco")
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NomeFantasia")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RazaoSocial")
+                        .HasMaxLength(150)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Telefone")
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Empresas");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.HistoricoValorVenal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CarroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataReferencia")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("ValorVenal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarroId");
+
+                    b.ToTable("HistoricoValorVenal");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Locacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CarroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("DataDevolucaoReal")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataPrevistaDevolucao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("KmFinal")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("KmInicial")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal?>("MultaAtraso")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Observacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("QuantidadeDiarias")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("ValorDiaria")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("ValorTotalFinal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ValorTotalPrevisto")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarroId");
+
+                    b.HasIndex("ClienteId");
+
+                    b.ToTable("Locacoes");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Manutencao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CarroId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DataManutencao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DescricaoServico")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("KmVeiculo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Observacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("ProximaRevisaoData")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("ProximaRevisaoKm")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Valor")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarroId");
+
+                    b.ToTable("Manutencoes");
+                });
 
             modelBuilder.Entity("BackEndApi.Models.RegistroServico", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Anotacoes")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LinhaTempo")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("tbRegistroServico");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Carro", b =>
+                {
+                    b.HasOne("BackEndApi.Models.Empresa", "Empresa")
+                        .WithMany("Carros")
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Empresa");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.DespesaGeral", b =>
+                {
+                    b.HasOne("BackEndApi.Models.Carro", "Carro")
+                        .WithMany("Despesas")
+                        .HasForeignKey("CarroId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Carro");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.HistoricoValorVenal", b =>
+                {
+                    b.HasOne("BackEndApi.Models.Carro", "Carro")
+                        .WithMany()
+                        .HasForeignKey("CarroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Carro");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Locacao", b =>
+                {
+                    b.HasOne("BackEndApi.Models.Carro", "Carro")
+                        .WithMany("Locacoes")
+                        .HasForeignKey("CarroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BackEndApi.Models.Cliente", "Cliente")
+                        .WithMany("Locacoes")
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Carro");
+
+                    b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Manutencao", b =>
+                {
+                    b.HasOne("BackEndApi.Models.Carro", "Carro")
+                        .WithMany("Manutencoes")
+                        .HasForeignKey("CarroId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Carro");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Carro", b =>
+                {
+                    b.Navigation("Despesas");
+
+                    b.Navigation("Locacoes");
+
+                    b.Navigation("Manutencoes");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Cliente", b =>
+                {
+                    b.Navigation("Locacoes");
+                });
+
+            modelBuilder.Entity("BackEndApi.Models.Empresa", b =>
+                {
+                    b.Navigation("Carros");
                 });
 #pragma warning restore 612, 618
         }

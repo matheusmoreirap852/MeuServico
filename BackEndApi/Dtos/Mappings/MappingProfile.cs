@@ -6,7 +6,10 @@ namespace BackEndApi.Dtos.Mappings
     public class MappingProfile : Profile
     {
         public MappingProfile() {
-            CreateMap<RegistroServico, RegistroServiceDto>().ReverseMap();
+            CreateMap<Carro, CarroDto>().ReverseMap();
+            CreateMap<Manutencao, ManutencaoDto>().ReverseMap();
+            CreateMap<DespesaGeral, DespesaGeralDto>().ReverseMap();
+            CreateMap<Locacao, LocacaoDto>().ReverseMap();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ProjetoServicoWork.Controllers
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IServicoDados _servicoDados;
+        
 
         public EnvioInformacoesController(ILogger<HomeController> logger,
             IConfiguration configuration,
