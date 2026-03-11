@@ -1,30 +1,175 @@
 ﻿@model MeuServico.Application.Dtos.CarroDto
+@using MeuServico.Core.Enums
 
-<h3>Editar Carro</h3>
+<div class="container mt-4">
 
-<form asp-action="Edit">
+    <div class="card shadow">
 
-    <input type="hidden" asp-for="Id" />
+        <div class="card-header bg-warning text-white">
+            <h4>
+                <i class="fa fa-car"></i> Editar Carro
+            </h4>
+        </div>
 
-    <div class="form-group">
-        <label>Placa</label>
-        <input asp-for="Placa" class="form-control" />
+        <div class="card-body">
+
+            <form asp-action="Edit">
+
+                <input type="hidden" asp-for="Id" />
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- IDENTIFICAÇÃO -->
+                <h5 class="text-secondary mb-3">Identificação</h5>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label asp-for="Placa"></label>
+                        <input asp-for="Placa" class="form-control" />
+                        <span asp-validation-for="Placa" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Marca"></label>
+                        <input asp-for="Marca" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Modelo"></label>
+                        <input asp-for="Modelo" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Cor"></label>
+                        <input asp-for="Cor" class="form-control" />
+                    </div>
+
+                </div>
+
+                <br />
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label asp-for="Ano"></label>
+                        <input asp-for="Ano" type="number" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="KmAtual"></label>
+                        <input asp-for="KmAtual" type="number" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Status"></label>
+
+                        <select asp-for="Status"
+                                class="form-control"
+                                asp-items="Html.GetEnumSelectList<StatusCarro>()">
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="EmpresaId"></label>
+
+                        <select asp-for="EmpresaId"
+                                class="form-control"
+                                asp-items="ViewBag.Empresas">
+
+                            <option value="">Selecione a empresa</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <br />
+
+                <!-- FINANCEIRO -->
+                <h5 class="text-secondary mb-3">Financeiro</h5>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <label asp-for="ValorPago"></label>
+                        <input asp-for="ValorPago"
+                               type="text"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="ValorVenal"></label>
+                        <input asp-for="ValorVenal"
+                               type="text"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="DataCompra"></label>
+                        <input asp-for="DataCompra" type="date" class="form-control" />
+                    </div>
+
+                </div>
+
+                <br />
+
+                <div class="text-end">
+
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa fa-arrow-left"></i> Voltar
+                    </a>
+
+                    <button type="submit" class="btn btn-warning">
+                        <i class="fa fa-save"></i> Atualizar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
 
-    <div class="form-group">
-        <label>Marca</label>
-        <input asp-for="Marca" class="form-control" />
-    </div>
+</div>
 
-    <div class="form-group">
-        <label>Modelo</label>
-        <input asp-for="Modelo" class="form-control" />
-    </div>
+@section Scripts {
 
-    <br />
+    <partial name="_ValidationScriptsPartial" />
 
-    <button class="btn btn-warning">Atualizar</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
-    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    <script>
 
-</form>
+        $(document).ready(function () {
+
+            $('#Placa').on('input', function () {
+                this.value = this.value.toUpperCase();
+            });
+
+            $('#ValorPago').mask('000.000.000,00', { reverse: true });
+            $('#ValorVenal').mask('000.000.000,00', { reverse: true });
+
+            $('form').on('submit', function () {
+
+                let valorPago = $('#ValorPago').val()
+                    .replace(/\./g, '')
+                    .replace(',', '.');
+
+                let valorVenal = $('#ValorVenal').val()
+                    .replace(/\./g, '')
+                    .replace(',', '.');
+
+                $('#ValorPago').val(valorPago);
+                $('#ValorVenal').val(valorVenal);
+
+            });
+
+        });
+
+    </script>
+
+}

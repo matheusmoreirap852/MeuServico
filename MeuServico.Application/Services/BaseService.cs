@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MeuServico.Application.Dtos;
 using MeuServico.Application.Interfaces;
 
 public class BaseService<TEntity, TDto>
@@ -47,5 +48,10 @@ public class BaseService<TEntity, TDto>
     public async Task<bool> Delete(int id)
     {
         return await _repository.DeleteById(id);
+    }
+
+    public Task Set(ClienteDto dto)
+    {
+        throw new NotImplementedException();
     }
 }
