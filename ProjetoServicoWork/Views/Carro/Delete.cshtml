@@ -1,0 +1,15 @@
+﻿@model MeuServico.Application.Dtos.CarroDto
+
+<h3>Excluir Carro</h3>
+
+<p>Tem certeza que deseja excluir o carro @Model.Modelo ?</p>
+
+<form asp-action="Delete">
+
+    <input type="hidden" asp-for="Id" />
+
+    <button class="btn btn-danger">Excluir</button>
+
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>

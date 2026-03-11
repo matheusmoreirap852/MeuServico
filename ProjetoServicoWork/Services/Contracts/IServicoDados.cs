@@ -1,6 +1,6 @@
 ﻿using ProjetoServicoWork.Models;
-
 namespace ProjetoServicoWork.Services.Contracts;
+
 
 public interface IServicoDados
 {

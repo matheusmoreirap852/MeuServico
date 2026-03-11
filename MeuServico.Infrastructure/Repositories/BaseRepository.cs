@@ -2,8 +2,6 @@
 using MeuServico.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace MeuServico.Infrastructure.Repositories.Interfaces;
 
 public class BaseRepository<TEntity>

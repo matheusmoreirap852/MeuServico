@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MeuServico.Core.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace MeuServico.Application.Dtos
 {
@@ -32,6 +33,11 @@ namespace MeuServico.Application.Dtos
 
         [Range(0, double.MaxValue)]
         public decimal ValorVenal { get; set; }
+
+        public DateTime? DataCompra { get; set; }
+
+        public StatusCarro Status { get; set; }
+            = StatusCarro.Disponivel;
 
         [Required]
         public int EmpresaId { get; set; }

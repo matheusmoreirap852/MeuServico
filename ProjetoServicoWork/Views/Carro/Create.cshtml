@@ -1,0 +1,177 @@
+﻿@model MeuServico.Application.Dtos.CarroDto
+@using MeuServico.Core.Enums
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-success text-white">
+            <h4>
+                <i class="fa fa-car"></i> Cadastro de Carro
+            </h4>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Create">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- IDENTIFICAÇÃO -->
+                <h5 class="text-secondary mb-3">Identificação</h5>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label asp-for="Placa"></label>
+                        <input asp-for="Placa" class="form-control" placeholder="ABC1234" />
+                        <span asp-validation-for="Placa" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Marca"></label>
+                        <input asp-for="Marca" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Modelo"></label>
+                        <input asp-for="Modelo" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Cor"></label>
+                        <input asp-for="Cor" class="form-control" />
+                    </div>
+
+                </div>
+
+                <br />
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label asp-for="Ano"></label>
+                        <input asp-for="Ano" type="number" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="KmAtual"></label>
+                        <input asp-for="KmAtual" type="number" class="form-control" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="Status"></label>
+
+                        <select asp-for="Status"
+                                class="form-control"
+                                asp-items="Html.GetEnumSelectList<StatusCarro>()">
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <label asp-for="EmpresaId"></label>
+
+                        <select asp-for="EmpresaId"
+                                class="form-control"
+                                asp-items="ViewBag.Empresas">
+
+                            <option value="">Selecione a empresa</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <br />
+
+                <!-- FINANCEIRO -->
+                <h5 class="text-secondary mb-3">Financeiro</h5>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <label asp-for="ValorPago"></label>
+                        <input asp-for="ValorPago"
+                               type="text"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="ValorVenal"></label>
+                        <input asp-for="ValorVenal"
+                               type="text"
+                               class="form-control" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="DataCompra"></label>
+                        <input asp-for="DataCompra" type="date" class="form-control" />
+                    </div>
+
+                </div>
+
+                <br />
+
+                <div class="text-end">
+
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa fa-arrow-left"></i> Voltar
+                    </a>
+
+                    <button type="submit" class="btn btn-success">
+                        <i class="fa fa-save"></i> Salvar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+    <!-- biblioteca máscara -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            // placa maiúscula
+            $('#Placa').on('input', function () {
+                this.value = this.value.toUpperCase();
+            });
+
+            // máscara monetária
+            $('#ValorPago').mask('000.000.000,00', { reverse: true });
+            $('#ValorVenal').mask('000.000.000,00', { reverse: true });
+
+            // converter valores antes da validação
+            $('form').on('submit', function () {
+
+                let valorPago = $('#ValorPago').val()
+                    .replace(/\./g, '')
+                    .replace(',', '.');
+
+                let valorVenal = $('#ValorVenal').val()
+                    .replace(/\./g, '')
+                    .replace(',', '.');
+
+                $('#ValorPago').val(valorPago);
+                $('#ValorVenal').val(valorVenal);
+
+            });
+
+        });
+
+    </script>
+
+}
