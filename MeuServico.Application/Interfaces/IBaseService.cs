@@ -9,5 +9,6 @@ public interface IBaseService<TEntityDto>
     Task<TEntityDto> Create(TEntityDto dto);
     Task<TEntityDto> Update(TEntityDto dto);
     Task<bool> Delete(int id);
-    Task Set(ClienteDto dto);
+    Task Set(TEntityDto dto);
+
 }

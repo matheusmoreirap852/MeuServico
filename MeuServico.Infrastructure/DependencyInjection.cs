@@ -33,18 +33,21 @@ public static class DependencyInjection
 
         services.AddScoped<ICarroRepository, CarroRepository>();
 
+        services.AddScoped<IDespesaGeralRepository, DespesaGeralRepository>();
+
         // =============================
         // SERVICES
         // =============================
-      
+
         services.AddScoped<IBaseService<CarroDto>, CarroService>();
         services.AddScoped<IBaseService<LocacaoDto>, LocacaoService>();
         services.AddScoped<IBaseService<ManutencaoDto>, ManutencaoService>();
         services.AddScoped<IBaseService<DespesaGeralDto>, DespesaGeralService>();
         services.AddScoped<IBaseService<EmpresaDto>, EmpresaService>();
         services.AddScoped<IBaseService<ClienteDto>, ClienteService>();
-        services.AddScoped<ICarroService, CarroService>();
 
+        services.AddScoped<ICarroService, CarroService>();
+        services.AddScoped<IDespesaGeralService, DespesaGeralService>();
         return services;
     }
 }

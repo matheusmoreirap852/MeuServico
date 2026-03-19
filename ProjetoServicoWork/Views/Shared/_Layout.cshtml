@@ -6,8 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- 
-
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
@@ -26,70 +24,27 @@
 
 <body>
 
-    <header>
+   
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+    <!-- NAVBAR -->
+    <partial name="_Navbar" />
 
-            <div class="container-fluid">
+    <!-- SIDEBAR -->
+    <partial name="_Sidebar" />
 
-               
-
-                <button class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-
-                    <ul class="navbar-nav me-auto">
-
-                        <li class="nav-item">
-
-                            <a class="nav-link"
-                               asp-controller="Carro"
-                               asp-action="Index">
-
-                                <i class="fa fa-car"></i> Meus Carros
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
-                    <partial name="_LoginPartial" />
-
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <div class="container mt-4">
-
+    <!-- CONTEÚDO -->
+    <div class="content">
         <main role="main">
-
             @RenderBody()
-
         </main>
 
+        <footer class="border-top text-muted mt-5">
+            <div class="container">
+                © 2026 - Meu Serviço
+            </div>
+        </footer>
     </div>
-
-    <footer class="border-top text-muted mt-5">
-
-        <div class="container">
-
-            © 2026 - Meu Serviço
-
-        </div>
-
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 

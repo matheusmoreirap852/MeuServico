@@ -11,13 +11,14 @@ namespace MeuServico.Application.Dtos
 
         public decimal Valor { get; set; }
 
-        public DateTime DataDespesa { get; set; }
+        public DateTime Data { get; set; }
 
         public TipoDespesa TipoDespesa { get; set; }
 
         // Relacionamento opcional com carro
         public int? CarroId { get; set; }
 
+        public string NomeCarro { get; set; } // ✅ CORRETO
         public string Observacao { get; set; }
     }
 }

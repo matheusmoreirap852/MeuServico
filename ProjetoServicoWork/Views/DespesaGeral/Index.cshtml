@@ -1,0 +1,212 @@
+﻿@using MeuServico.Core.Enums
+@model X.PagedList.IPagedList<MeuServico.Application.Dtos.DespesaGeralDto>
+
+<div class="container-fluid mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-danger text-white d-flex justify-content-between">
+
+            <h4 class="mb-0">
+                <i class="fa fa-money-bill"></i> Gestão de Despesas
+            </h4>
+
+            <a asp-action="Create" class="btn btn-light">
+                <i class="fa fa-plus"></i> Nova Despesa
+            </a>
+
+        </div>
+
+        <div class="card-body">
+
+            <!-- 💰 TOTAL -->
+            <div class="alert alert-dark d-flex justify-content-between">
+                <strong>Total das despesas:</strong>
+                <span class="text-danger fw-bold">
+                    @Model.Sum(x => x.Valor).ToString("C")
+                </span>
+            </div>
+
+            <!-- 🔍 FILTRO COMPLETO -->
+            <form method="get" class="mb-3">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <input type="text"
+                               name="filter"
+                               class="form-control"
+                               placeholder="Descrição"
+                               value="@Context.Request.Query["filter"]" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="text"
+                               name="placa"
+                               class="form-control"
+                               placeholder="Placa do carro"
+                               value="@Context.Request.Query["placa"]" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="date"
+                               name="inicio"
+                               class="form-control"
+                               value="@Context.Request.Query["inicio"]" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="date"
+                               name="fim"
+                               class="form-control"
+                               value="@Context.Request.Query["fim"]" />
+                    </div>
+
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-danger w-100">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <table id="despesasTable" class="table table-striped table-hover">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Carro</th>
+                        <th width="150">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var despesa in Model)
+                    {
+                        <tr>
+
+                            <td>@despesa.Descricao</td>
+
+                            <td>
+                                <span class="badge @(despesa.Valor > 500 ? "bg-danger" : "bg-success")">
+                                    @despesa.Valor.ToString("C")
+                                </span>
+                            </td>
+
+                            <td>
+                                <i class="fa fa-calendar text-secondary"></i>
+                                @despesa.Data.ToString("dd/MM/yyyy")
+                            </td>
+
+                            <td>
+                                @switch (despesa.TipoDespesa)
+                                {
+                                    case TipoDespesa.Combustivel:
+                                        <span class="badge bg-primary">⛽ Combustível</span>
+                                        break;
+
+                                    case TipoDespesa.Seguro:
+                                        <span class="badge bg-info text-dark">🛡️ Seguro</span>
+                                        break;
+
+                                    case TipoDespesa.IPVA:
+                                        <span class="badge bg-dark">📄 IPVA</span>
+                                        break;
+
+                                    case TipoDespesa.Licenciamento:
+                                        <span class="badge bg-secondary">📋 Licenciamento</span>
+                                        break;
+
+                                    case TipoDespesa.Multa:
+                                        <span class="badge bg-danger">🚨 Multa</span>
+                                        break;
+
+                                    case TipoDespesa.ManutencaoExtra:
+                                        <span class="badge bg-warning text-dark">🔧 Manutenção</span>
+                                        break;
+
+                                    case TipoDespesa.Lavagem:
+                                        <span class="badge bg-light text-dark">🧼 Lavagem</span>
+                                        break;
+
+                                    case TipoDespesa.Administrativo:
+                                        <span class="badge bg-info">🏢 Administrativo</span>
+                                        break;
+
+                                    case TipoDespesa.Outros:
+                                        <span class="badge bg-secondary">📦 Outros</span>
+                                        break;
+
+                                    default:
+                                        <span class="badge bg-secondary">@despesa.TipoDespesa</span>
+                                        break;
+                                }
+                            </td>
+
+                            <td>
+                                <i class="fa fa-car text-secondary"></i>
+                                @(string.IsNullOrEmpty(despesa.NomeCarro) ? "—" : despesa.NomeCarro)
+                            </td>
+
+                            <td>
+
+                                <a asp-action="Details"
+                                       asp-route-id="@despesa.Id"
+                                       class="btn btn-info btn-sm">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+
+                                <a asp-action="Edit"
+                                       asp-route-id="@despesa.Id"
+                                       class="btn btn-warning btn-sm">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+
+                                <a asp-action="Delete"
+                                       asp-route-id="@despesa.Id"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Tem certeza que deseja excluir esta despesa?')">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#despesasTable').DataTable({
+
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json'
+                },
+
+                pageLength: 10,
+                order: [[2, 'desc']]
+
+            });
+
+        });
+
+    </script>
+
+}

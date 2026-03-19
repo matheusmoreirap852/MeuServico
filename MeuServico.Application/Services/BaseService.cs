@@ -50,7 +50,7 @@ public class BaseService<TEntity, TDto>
         return await _repository.DeleteById(id);
     }
 
-    public Task Set(ClienteDto dto)
+    public Task Set(TDto dto)
     {
         throw new NotImplementedException();
     }

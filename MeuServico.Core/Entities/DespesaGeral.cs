@@ -10,12 +10,15 @@ namespace MeuServico.Core.Entities
 
         public decimal Valor { get; set; }
 
-        public DateTime DataDespesa { get; set; }
+        public DateTime Data { get; set; }
 
         public TipoDespesa TipoDespesa { get; set; }
 
         // Relacionamento opcional com carro
         public int? CarroId { get; set; }
+        
+        
+        // 🔥 NAVIGATION PROPERTY (ESSA LINHA É A CHAVE)
         public Carro? Carro { get; set; }
 
         public string Observacao { get; set; }
