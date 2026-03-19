@@ -1,0 +1,127 @@
+﻿@model X.PagedList.IPagedList<MeuServico.Application.Dtos.ClienteDto>
+
+<div class="container-fluid mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white d-flex justify-content-between">
+
+            <h4 class="mb-0">
+                <i class="fa fa-users"></i> Gestão de Clientes
+            </h4>
+
+            <a asp-action="Create" class="btn btn-light">
+                <i class="fa fa-plus"></i> Novo Cliente
+            </a>
+
+        </div>
+
+        <div class="card-body">
+
+            <!-- 🔍 FILTRO -->
+            <form method="get" class="mb-3">
+                <div class="input-group">
+
+                    <input type="text"
+                           name="filter"
+                           class="form-control"
+                           placeholder="Buscar por nome ou CPF"
+                           value="@Context.Request.Query["filter"]" />
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-search"></i> Buscar
+                    </button>
+
+                </div>
+            </form>
+
+            <table id="clientesTable" class="table table-striped table-hover">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>CNH</th>
+                        <th>Validade CNH</th>
+                        <th width="150">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var cliente in Model)
+                    {
+                        <tr>
+
+                            <td>@cliente.Nome</td>
+
+                            <td>
+                                <span class="badge bg-secondary">
+                                    @cliente.CPF
+                                </span>
+                            </td>
+
+                            <td>@cliente.Telefone</td>
+
+                            <td>@cliente.CNH</td>
+
+                            <td>
+                                @cliente.ValidadeCNH.ToString("dd/MM/yyyy")
+                            </td>
+
+                            <td>
+
+                                <a asp-action="Details"
+                                       asp-route-id="@cliente.Id"
+                                       class="btn btn-info btn-sm">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+
+                                <a asp-action="Edit"
+                                       asp-route-id="@cliente.Id"
+                                       class="btn btn-warning btn-sm">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+
+                                <a asp-action="Delete"
+                                       asp-route-id="@cliente.Id"
+                                       class="btn btn-danger btn-sm">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#clientesTable').DataTable({
+
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json'
+                },
+
+                pageLength: 10,
+                order: [[0, 'asc']]
+
+            });
+
+        });
+
+    </script>
+
+}

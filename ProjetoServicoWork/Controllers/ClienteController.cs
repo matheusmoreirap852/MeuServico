@@ -2,119 +2,118 @@
 using MeuServico.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
+using X.PagedList.Mvc.Core;
 
-namespace ProjetoServicoWork.ControllersView
+public class ClienteController : Controller
 {
-    public class ClienteController : Controller
+    private readonly IBaseService<ClienteDto> _service;
+
+    public ClienteController(IBaseService<ClienteDto> service)
     {
-        private readonly IBaseService<ClienteDto> _service;
+        _service = service;
+    }
 
-        public ClienteController(IBaseService<ClienteDto> service)
+    // ===============================
+    // INDEX
+    // ===============================
+    public async Task<IActionResult> Index(string filter, int pagina = 1)
+    {
+        var clientes = await _service.GetAll();
+
+        if (!string.IsNullOrEmpty(filter))
         {
-            _service = service;
+            clientes = clientes
+                .Where(c => (c.Nome ?? "").Contains(filter) ||
+                            (c.CPF ?? "").Contains(filter))
+                .ToList();
         }
 
-        // ===============================
-        // INDEX
-        // ===============================
+        var paginado = clientes.ToPagedList(pagina, 10);
 
-        public async Task<IActionResult> Index(string filter, int pagina = 1)
-        {
-            var clientes = await _service.GetAll();
+        return View(paginado);
+    }
 
-            if (!string.IsNullOrEmpty(filter))
-            {
-                clientes = clientes
-                    .Where(c => c.Nome.Contains(filter) ||
-                                c.CPF.Contains(filter))
-                    .ToList();
-            }
+    // ===============================
+    // CREATE
+    // ===============================
+    public IActionResult Create()
+    {
+        return View();
+    }
 
-            var paginado = clientes.ToPagedList(pagina, 10);
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(ClienteDto dto)
+    {
+        if (!ModelState.IsValid)
+            return View(dto);
 
-            return View(paginado);
-        }
+        await _service.Create(dto);
 
-        // ===============================
-        // CREATE
-        // ===============================
+        return RedirectToAction(nameof(Index));
+    }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+    // ===============================
+    // DETAILS
+    // ===============================
+    public async Task<IActionResult> Details(int id)
+    {
+        var cliente = await _service.GetById(id);
 
-        [HttpPost]
-        public async Task<IActionResult> Create(ClienteDto dto)
-        {
-            if (!ModelState.IsValid)
-                return View(dto);
+        if (cliente == null)
+            return NotFound();
 
-            await _service.Set(dto);
+        return View(cliente);
+    }
 
-            return RedirectToAction("Index");
-        }
+    // ===============================
+    // EDIT
+    // ===============================
+    public async Task<IActionResult> Edit(int id)
+    {
+        var cliente = await _service.GetById(id);
 
-        // ===============================
-        // DETAILS
-        // ===============================
+        if (cliente == null)
+            return NotFound();
 
-        public async Task<IActionResult> Details(int id)
-        {
-            var cliente = await _service.GetById(id);
+        return View(cliente);
+    }
 
-            if (cliente == null)
-                return NotFound();
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, ClienteDto dto)
+    {
+        if (id != dto.Id)
+            return NotFound();
 
-            return View(cliente);
-        }
+        if (!ModelState.IsValid)
+            return View(dto);
 
-        // ===============================
-        // EDIT
-        // ===============================
+        await _service.Update(dto);
 
-        public async Task<IActionResult> Edit(int id)
-        {
-            var cliente = await _service.GetById(id);
+        return RedirectToAction(nameof(Index));
+    }
 
-            if (cliente == null)
-                return NotFound();
 
-            return View(cliente);
-        }
+    // ===============================
+    // DELETE
+    // ===============================
+    public async Task<IActionResult> Delete(int id)
+    {
+        var cliente = await _service.GetById(id);
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(ClienteDto dto)
-        {
-            if (!ModelState.IsValid)
-                return View(dto);
+        if (cliente == null)
+            return NotFound();
 
-            await _service.Update(dto);
+        return View(cliente);
+    }
 
-            return RedirectToAction(nameof(Index));
-        }
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        await _service.Delete(id);
 
-        // ===============================
-        // DELETE
-        // ===============================
-
-        public async Task<IActionResult> Delete(int id)
-        {
-            var cliente = await _service.GetById(id);
-
-            if (cliente == null)
-                return NotFound();
-
-            return View(cliente);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            await _service.Delete(id);
-
-            return RedirectToAction(nameof(Index));
-        }
+        return RedirectToAction(nameof(Index));
     }
 }

@@ -1,0 +1,105 @@
+﻿@model MeuServico.Application.Dtos.ClienteDto
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <!-- HEADER -->
+        <div class="card-header bg-primary text-white d-flex justify-content-between">
+
+            <h4 class="mb-0">
+                <i class="fa fa-user"></i> Detalhes do Cliente
+            </h4>
+
+            <a asp-action="Index" class="btn btn-light">
+                <i class="fa fa-arrow-left"></i> Voltar
+            </a>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- COLUNA ESQUERDA -->
+                <div class="col-md-6">
+
+                    <div class="mb-3">
+                        <label class="fw-bold">Nome</label>
+                        <div class="form-control bg-light">
+                            @Model.Nome
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-bold">CPF</label>
+                        <div class="form-control bg-light">
+                            <span class="badge bg-secondary fs-6">
+                                @Model.CPF
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-bold">Telefone</label>
+                        <div class="form-control bg-light">
+                            @Model.Telefone
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUNA DIREITA -->
+                <div class="col-md-6">
+
+                    <div class="mb-3">
+                        <label class="fw-bold">CNH</label>
+                        <div class="form-control bg-light">
+                            @Model.CNH
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-bold">Validade CNH</label>
+                        <div class="form-control bg-light">
+
+                            @if (Model.ValidadeCNH < DateTime.Now)
+                            {
+                                <span class="badge bg-danger fs-6">
+                                    Vencida (@Model.ValidadeCNH.ToString("dd/MM/yyyy"))
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-success fs-6">
+                                    Válida (@Model.ValidadeCNH.ToString("dd/MM/yyyy"))
+                                </span>
+                            }
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AÇÕES -->
+            <div class="mt-4 d-flex gap-2">
+
+                <a asp-action="Edit" asp-route-id="@Model.Id"
+                       class="btn btn-warning">
+                    <i class="fa fa-edit"></i> Editar
+                </a>
+
+                <a asp-action="Delete" asp-route-id="@Model.Id"
+                       class="btn btn-danger">
+                    <i class="fa fa-trash"></i> Excluir
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
