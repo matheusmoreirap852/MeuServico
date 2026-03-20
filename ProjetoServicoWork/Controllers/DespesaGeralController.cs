@@ -1,6 +1,7 @@
 ﻿using MeuServico.Application.Dtos;
 using MeuServico.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
 
 namespace MeuServico.API.Controllers
@@ -9,24 +10,29 @@ namespace MeuServico.API.Controllers
     {
         private readonly IBaseService<DespesaGeralDto> _service;
         private readonly IDespesaGeralService _serviceDespesaGeral;
+        private readonly IBaseService<CarroDto> _carroService; // 🔥 NOVO
 
-        public DespesaGeralController(IBaseService<DespesaGeralDto> service, IDespesaGeralService serviceDespesaGeral)
+        public DespesaGeralController(
+            IBaseService<DespesaGeralDto> service,
+            IDespesaGeralService serviceDespesaGeral,
+            IBaseService<CarroDto> carroService // 🔥 NOVO
+        )
         {
             _service = service;
             _serviceDespesaGeral = serviceDespesaGeral;
+            _carroService = carroService;
         }
 
         public async Task<IActionResult> Index(
-         string filter,
-         string placa,
-         int? carroId,
-         DateTime? inicio,
-         DateTime? fim,
-         int pagina = 1)
+            string filter,
+            string placa,
+            int? carroId,
+            DateTime? inicio,
+            DateTime? fim,
+            int pagina = 1)
         {
             IEnumerable<DespesaGeralDto> despesas;
 
-            // 🔥 prioridade: filtros mais específicos
             if (carroId.HasValue)
             {
                 despesas = await _serviceDespesaGeral.GetByCarroId(carroId.Value);
@@ -40,22 +46,21 @@ namespace MeuServico.API.Controllers
             else
             {
                 despesas = await _serviceDespesaGeral.GetAllWithCarro();
+                ViewBag.Total = despesas.Sum(d => d.Valor); // 🔥 CORREÇÃO
             }
 
-            // 🔎 filtro por descrição
             if (!string.IsNullOrEmpty(filter))
             {
-                despesas = despesas
-                    .Where(d => d.Descricao != null &&
-                                d.Descricao.Contains(filter, StringComparison.OrdinalIgnoreCase));
+                despesas = despesas.Where(d =>
+                    d.Descricao != null &&
+                    d.Descricao.Contains(filter, StringComparison.OrdinalIgnoreCase));
             }
 
-            // 🚗 filtro por placa
             if (!string.IsNullOrEmpty(placa))
             {
-                despesas = despesas
-                    .Where(d => d.NomeCarro != null &&
-                                d.NomeCarro.Contains(placa, StringComparison.OrdinalIgnoreCase));
+                despesas = despesas.Where(d =>
+                    d.NomeCarro != null &&
+                    d.NomeCarro.Contains(placa, StringComparison.OrdinalIgnoreCase));
             }
 
             var paginado = despesas.ToPagedList(pagina, 10);
@@ -63,25 +68,46 @@ namespace MeuServico.API.Controllers
             return View(paginado);
         }
 
-        // GET - CREATE
-        public IActionResult Create()
+        // ============================
+        // CREATE
+        // ============================
+
+        public async Task<IActionResult> Create()
         {
+            await CarregarCarros();
             return View();
         }
 
-        // POST - CREATE
         [HttpPost]
         public async Task<IActionResult> Create(DespesaGeralDto dto)
         {
             if (!ModelState.IsValid)
+            {
+                var erros = ModelState
+                    .Where(x => x.Value.Errors.Count > 0)
+                    .Select(x => new {
+                        Campo = x.Key,
+                        Erros = x.Value.Errors.Select(e => e.ErrorMessage)
+                    });
+
+                // breakpoint aqui 🔥
+
+                await CarregarCarros();
                 return View(dto);
+            }
+
+            // 🔥 FORÇA DATA ATUAL
+            dto.Data = DateTime.Now;
 
             await _service.Create(dto);
 
             return RedirectToAction(nameof(Index));
         }
 
-        // GET - EDIT
+        // ============================
+        // EDIT
+        // ============================
+
         public async Task<IActionResult> Edit(int id)
         {
             var despesa = await _service.GetById(id);
@@ -89,29 +115,39 @@ namespace MeuServico.API.Controllers
             if (despesa == null)
                 return NotFound();
 
+            await CarregarCarros(); // 🔥 IMPORTANTE
+
             return View(despesa);
         }
 
-        // POST - EDIT
         [HttpPost]
         public async Task<IActionResult> Edit(DespesaGeralDto dto)
         {
             if (!ModelState.IsValid)
+            {
+                await CarregarCarros();
                 return View(dto);
+            }
 
             await _service.Update(dto);
 
             return RedirectToAction(nameof(Index));
         }
 
+        // ============================
         // DELETE
+        // ============================
+
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }
 
+        // ============================
         // DETAILS
+        // ============================
+
         public async Task<IActionResult> Details(int id)
         {
             var despesa = await _service.GetById(id);
@@ -120,6 +156,21 @@ namespace MeuServico.API.Controllers
                 return NotFound();
 
             return View(despesa);
+        }
+
+        // ============================
+        // 🔥 MÉTODO AUXILIAR
+        // ============================
+
+        private async Task CarregarCarros()
+        {
+            var carros = await _carroService.GetAll();
+
+            ViewBag.Carros = carros.Select(c => new SelectListItem
+            {
+                Value = c.Id.ToString(),
+                Text = c.Placa.ToString()
+            }).ToList();
         }
     }
 }

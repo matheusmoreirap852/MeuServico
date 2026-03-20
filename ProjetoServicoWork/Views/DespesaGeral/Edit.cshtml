@@ -1,0 +1,58 @@
+﻿@using MeuServico.Core.Enums
+@model MeuServico.Application.Dtos.DespesaGeralDto
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-danger text-white">
+            <h4><i class="fa fa-plus"></i> Nova Despesa</h4>
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Create">
+
+                <div class="mb-3">
+                    <label>Descrição</label>
+                    <input asp-for="Descricao" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Valor</label>
+                    <input asp-for="Valor" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Data</label>
+                    <input asp-for="Data" type="date" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Tipo</label>
+                    <select asp-for="TipoDespesa" class="form-control"
+                            asp-items="Html.GetEnumSelectList<TipoDespesa>()">
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label>Carro</label>
+                    <select asp-for="CarroId" class="form-control"
+                            asp-items="ViewBag.Carros">
+                        <option value="">Sem carro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    💾 Salvar
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    Voltar
+                </a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
