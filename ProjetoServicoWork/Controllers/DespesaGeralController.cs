@@ -1,5 +1,6 @@
 ﻿using MeuServico.Application.Dtos;
 using MeuServico.Application.Interfaces;
+using MeuServico.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
@@ -81,6 +82,8 @@ namespace MeuServico.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(DespesaGeralDto dto)
         {
+
+
             if (!ModelState.IsValid)
             {
                 var erros = ModelState
@@ -97,7 +100,7 @@ namespace MeuServico.API.Controllers
             }
 
             // 🔥 FORÇA DATA ATUAL
-            dto.Data = DateTime.Now;
+            //dto.Data = DateTime.Now;
 
             await _service.Create(dto);
 
@@ -138,7 +141,26 @@ namespace MeuServico.API.Controllers
         // DELETE
         // ============================
 
+        // ============================
+        // DELETE - CONFIRMAÇÃO (GET)
+        // ============================
         public async Task<IActionResult> Delete(int id)
+        {
+            var despesa = await _service.GetById(id);
+
+            if (despesa == null)
+                return NotFound();
+
+            return View(despesa);
+        }
+
+        // ============================
+        // DELETE CONFIRMADO (POST)
+        // ============================
+
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
@@ -151,7 +173,7 @@ namespace MeuServico.API.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var despesa = await _service.GetById(id);
-
+           var despesas = await _serviceDespesaGeral.GetByCarroId(id);
             if (despesa == null)
                 return NotFound();
 

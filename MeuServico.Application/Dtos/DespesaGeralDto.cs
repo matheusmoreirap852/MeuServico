@@ -19,6 +19,5 @@ namespace MeuServico.Application.Dtos
         public int? CarroId { get; set; }
 
         public string ? NomeCarro { get; set; } // ✅ CORRETO
-        public string ? Observacao { get; set; }
     }
 }

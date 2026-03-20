@@ -20,7 +20,5 @@ namespace MeuServico.Core.Entities
         
         // 🔥 NAVIGATION PROPERTY (ESSA LINHA É A CHAVE)
         public Carro? Carro { get; set; }
-
-        public string Observacao { get; set; }
     }
 }

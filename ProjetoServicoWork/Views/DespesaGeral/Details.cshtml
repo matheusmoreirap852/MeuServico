@@ -1,0 +1,80 @@
+﻿@model MeuServico.Application.Dtos.DespesaGeralDto
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <!-- HEADER -->
+        <div class="card-header bg-info text-white">
+            <h4>
+                <i class="fa fa-eye"></i> Detalhes da Despesa
+            </h4>
+        </div>
+
+        <!-- BODY -->
+        <div class="card-body">
+
+            <div class="row">
+
+                <!-- DESCRIÇÃO -->
+                <div class="col-md-6 mb-3">
+                    <label><strong>Descrição</strong></label>
+                    <div class="form-control">
+                        @Model.Descricao
+                    </div>
+                </div>
+
+                <!-- VALOR -->
+                <div class="col-md-3 mb-3">
+                    <label><strong>Valor</strong></label>
+                    <div class="form-control text-success">
+                        @Model.Valor.ToString("C")
+                    </div>
+                </div>
+
+                <!-- DATA -->
+                <div class="col-md-3 mb-3">
+                    <label><strong>Data</strong></label>
+                    <div class="form-control">
+                        @Model.Data.ToString("dd/MM/yyyy")
+                    </div>
+                </div>
+
+                <!-- TIPO -->
+                <div class="col-md-4 mb-3">
+                    <label><strong>Tipo</strong></label>
+                    <div class="form-control">
+                        @Model.TipoDespesa
+                    </div>
+                </div>
+
+                <!-- CARRO -->
+                <div class="col-md-4 mb-3">
+                    <label><strong>Carro</strong></label>
+                    <div class="form-control">
+                        @(Model.NomeCarro ?? "Sem veículo")
+                    </div>
+                </div>
+
+               
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="card-footer text-end">
+
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">
+                <i class="fa fa-edit"></i> Editar
+            </a>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="fa fa-arrow-left"></i> Voltar
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

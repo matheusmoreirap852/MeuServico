@@ -1,0 +1,74 @@
+﻿@model MeuServico.Application.Dtos.DespesaGeralDto
+
+<div class="container mt-4">
+
+    <div class="card shadow border-danger">
+
+        <!-- HEADER -->
+        <div class="card-header bg-danger text-white">
+            <h4>
+                <i class="fa fa-trash"></i> Confirmar Exclusão
+            </h4>
+        </div>
+
+        <!-- BODY -->
+        <div class="card-body">
+
+            <div class="alert alert-danger">
+                ⚠️ Tem certeza que deseja excluir esta despesa?
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label><strong>Descrição</strong></label>
+                    <div class="form-control">
+                        @Model.Descricao
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label><strong>Valor</strong></label>
+                    <div class="form-control text-danger">
+                        @Model.Valor.ToString("C")
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label><strong>Data</strong></label>
+                    <div class="form-control">
+                        @Model.Data.ToString("dd/MM/yyyy")
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label><strong>Carro</strong></label>
+                    <div class="form-control">
+                        @(Model.NomeCarro ?? "Sem veículo")
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="card-footer text-end">
+
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="Id" />
+
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa fa-trash"></i> Confirmar Exclusão
+                </button>
+
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fa fa-arrow-left"></i> Cancelar
+                </a>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
